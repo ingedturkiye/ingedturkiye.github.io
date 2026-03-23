@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">News — INGED</title>
+  <meta name="description" content="INGED news and announcements.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── News detail layout ── */
+    .news-detail-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px 72px;
+    }
+    .news-detail-hero-img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      margin: 24px 0 28px;
+      display: block;
+    }
+    .news-detail-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .news-detail-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 28px;
+    }
+    .news-detail-body p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-mid);
+      margin-bottom: 1.2rem;
+    }
+    .news-detail-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .86rem;
+      font-weight: 600;
+      color: var(--navy-mid);
+      text-decoration: none;
+      margin-bottom: 40px;
+      transition: opacity .18s;
+    }
+    .news-detail-back:hover { opacity: .7; }
+    .news-detail-back svg { flex-shrink: 0; }
+    .news-detail-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    /* ── Image slider ── */
+    .img-slider {
+      position: relative;
+      width: 100%;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin: 24px 0 28px;
+      background: var(--border);
+      user-select: none;
+    }
+    .img-slider-track {
+      display: flex;
+      transition: transform .38s cubic-bezier(.4,0,.2,1);
+    }
+    .img-slider-track img {
+      width: 100%;
+      flex-shrink: 0;
+      max-height: 460px;
+      object-fit: cover;
+      display: block;
+    }
+    .img-slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(0,0,0,.45);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      z-index: 2;
+      transition: background .18s;
+    }
+    .img-slider-btn:hover { background: rgba(0,0,0,.7); }
+    .img-slider-btn.prev  { left: 12px; }
+    .img-slider-btn.next  { right: 12px; }
+    .img-slider-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 2;
+    }
+    .img-slider-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.5);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background .18s, transform .18s;
+    }
+    .img-slider-dot.active {
+      background: #fff;
+      transform: scale(1.25);
+    }
+
+    /* Not found state */
+    .news-not-found {
+      text-align: center;
+      padding: 80px 24px;
+      color: var(--text-mid);
+    }
+    .news-not-found h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body data-page="events">
+
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO — small, shows article title dynamically -->
+  <section class="hero hero-inner" id="detailHero"
+           style="background: linear-gradient(160deg,rgba(0,8,28,.88) 0%,rgba(0,26,80,.80) 100%); min-height:260px;">
+    <div class="hero-content" style="position:relative;z-index:2;">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="events.html">Events &amp; Updates</a>
+        <span class="breadcrumb-sep">/</span>
+        <span id="breadcrumbTitle">News</span>
+      </nav>
+      <h1 id="heroTitle" style="max-width:640px;font-size:clamp(1.4rem,3.5vw,2rem);line-height:1.3;">Loading&hellip;</h1>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <section class="section">
+    <div class="news-detail-wrap">
+
+      <a href="events.html" class="news-detail-back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Events &amp; Updates
+      </a>
+
+      <div id="articleContent">
+        <!-- Populated by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Data files -->
+  <script src="data/news.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+  (function () {
+
+    /* ── Category config (mirrors events.html) ── */
+    var CAT = {
+      conference:   { label: "Conference",     tag: "tag-navy" },
+      drama:        { label: "Drama Festival", tag: "tag-purple" },
+      research:     { label: "Research",       tag: "tag-blue" },
+      workshop:     { label: "Workshop",       tag: "tag-green" },
+      zoom:         { label: "Zoom Session",   tag: "tag-blue" },
+      announcement: { label: "Announcement",  tag: "tag-orange" },
+      elter:        { label: "ELTER",          tag: "tag-blue" }
+    };
+
+    function catInfo(key) {
+      return CAT[key] || { label: key, tag: "tag-navy" };
+    }
+
+    /* ── Read ?id= from URL ── */
+    function getParam(name) {
+      var search = window.location.search;
+      var re     = new RegExp('[?&]' + name + '=([^&]*)');
+      var match  = search.match(re);
+      return match ? decodeURIComponent(match[1]) : null;
+    }
+
+    /* ── Render the article ── */
+    function render() {
+      var id   = getParam('id');
+      var data = typeof NEWS_DATA !== 'undefined' ? NEWS_DATA : [];
+      var item = data.filter(function (n) { return n.id === id; })[0];
+      var cat  = item ? catInfo(item.category) : null;
+
+      /* ── Not found ── */
+      if (!item) {
+        document.getElementById('heroTitle').textContent  = 'Article not found';
+        document.getElementById('breadcrumbTitle').textContent = 'Not found';
+        document.getElementById('articleContent').innerHTML = [
+          '<div class="news-not-found">',
+            '<h2>Article not found</h2>',
+            '<p>The news item you\'re looking for doesn\'t exist or may have been removed.</p>',
+            '<a href="events.html" class="btn btn-primary" style="margin-top:16px;">Back to Events &amp; Updates</a>',
+          '</div>'
+        ].join('');
+        return;
+      }
+
+      /* ── Page title & breadcrumb ── */
+      document.title = item.title + ' — INGED';
+      document.getElementById('pageTitle').textContent    = item.title + ' — INGED';
+      document.getElementById('heroTitle').textContent    = item.title;
+      document.getElementById('breadcrumbTitle').textContent = item.title.length > 50
+        ? item.title.slice(0, 50) + '…'
+        : item.title;
+
+      /* ── Build image block (slider or single) ── */
+      var imgList = Array.isArray(item.images) && item.images.length
+        ? item.images
+        : (item.image ? [item.image] : []);
+
+      var imageBlockHtml = '';
+      if (imgList.length === 1) {
+        imageBlockHtml = '<img src="' + imgList[0] + '" alt="' + item.title + '" class="news-detail-hero-img">';
+      } else if (imgList.length > 1) {
+        var slides = imgList.map(function (src) {
+          return '<img src="' + src + '" alt="' + item.title + '">';
+        }).join('');
+        var dots = imgList.map(function (_, i) {
+          return '<button class="img-slider-dot' + (i === 0 ? ' active' : '') + '" data-idx="' + i + '" aria-label="Image ' + (i+1) + '"></button>';
+        }).join('');
+        imageBlockHtml = [
+          '<div class="img-slider" id="imgSlider">',
+            '<div class="img-slider-track" id="imgSliderTrack">' + slides + '</div>',
+            '<button class="img-slider-btn prev" id="sliderPrev" aria-label="Previous">',
+              '<svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+            '</button>',
+            '<button class="img-slider-btn next" id="sliderNext" aria-label="Next">',
+              '<svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+            '</button>',
+            '<div class="img-slider-dots" id="sliderDots">' + dots + '</div>',
+          '</div>'
+        ].join('');
+      }
+
+      /* ── Body paragraphs, with image block injected after paragraph 1 ── */
+      var paragraphs = Array.isArray(item.fullText) && item.fullText.length
+        ? item.fullText
+        : [item.body];
+
+      var parasHtml = paragraphs.map(function (p, i) {
+        var para = '<p>' + p + '</p>';
+        return (i === 0 && imageBlockHtml) ? para + imageBlockHtml : para;
+      }).join('');
+
+      /* ── PDF download button ── */
+      var pdfHtml = '';
+      if (item.pdf && item.pdf.href) {
+        pdfHtml = [
+          '<a href="' + item.pdf.href + '" target="_blank" rel="noopener"',
+          '   style="display:inline-flex;align-items:center;gap:8px;',
+          '          margin-top:8px;margin-bottom:4px;padding:10px 18px;',
+          '          background:var(--navy);color:#fff;border-radius:var(--radius);',
+          '          font-size:.88rem;font-weight:600;text-decoration:none;',
+          '          transition:opacity .18s;" onmouseover="this.style.opacity=\'.82\'"',
+          '          onmouseout="this.style.opacity=\'1\'">',
+          '  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">',
+          '    <path d="M3 13h10M8 3v7m0 0l-3-3m3 3l3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+          '  </svg>',
+          '  ' + (item.pdf.label || 'Download PDF'),
+          '</a>'
+        ].join('');
+      }
+
+      document.getElementById('articleContent').innerHTML = [
+        /* meta row */
+        '<div class="news-detail-meta">',
+          '<span class="tag ' + cat.tag + '">' + cat.label + '</span>',
+          '<span style="font-size:.82rem;color:var(--text-light);font-weight:600;">' + (item.date || '') + '</span>',
+        '</div>',
+
+        /* title */
+        '<h2 class="news-detail-title">' + item.title + '</h2>',
+
+        /* body (image is injected after paragraph 1 inside parasHtml) */
+        '<div class="news-detail-body">' + parasHtml + '</div>',
+
+        /* PDF download button (if provided) */
+        pdfHtml,
+
+        '<hr class="news-detail-divider">',
+
+        /* footer nav */
+        '<a href="events.html" class="news-detail-back">',
+          '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">',
+            '<path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+          '</svg>',
+          'Back to Events &amp; Updates',
+        '</a>'
+      ].join('');
+    }
+
+    render();
+
+    /* ── Slider initialisation (runs after render() injects the DOM) ── */
+    function initSlider() {
+      var slider = document.getElementById('imgSlider');
+      if (!slider) return;
+
+      var track  = document.getElementById('imgSliderTrack');
+      var prev   = document.getElementById('sliderPrev');
+      var next   = document.getElementById('sliderNext');
+      var dotsEl = document.getElementById('sliderDots');
+      var dots   = dotsEl ? dotsEl.querySelectorAll('.img-slider-dot') : [];
+      var total  = track ? track.children.length : 0;
+      var cur    = 0;
+
+      function goTo(idx) {
+        cur = (idx + total) % total;
+        track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+        dots.forEach(function (d, i) { d.classList.toggle('active', i === cur); });
+      }
+
+      if (prev)  prev.addEventListener('click',  function () { goTo(cur - 1); });
+      if (next)  next.addEventListener('click',  function () { goTo(cur + 1); });
+      dots.forEach(function (d) {
+        d.addEventListener('click', function () { goTo(parseInt(d.getAttribute('data-idx'))); });
+      });
+
+      /* swipe support */
+      var startX = 0;
+      slider.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+      slider.addEventListener('touchend',   function (e) {
+        var diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
+      });
+    }
+
+    initSlider();
+
+  })();
+  </script>
+
+</body>
+</html>

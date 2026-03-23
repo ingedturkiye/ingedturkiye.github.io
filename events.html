@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upcoming Events &amp; News — INGED</title>
+  <meta name="description" content="Stay up to date with all INGED events — conferences, workshops, Zoom sessions, drama festivals, and the latest news and announcements.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="events">
+
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="hero hero-inner" style="background:url('banners/events.jpg') center 40% / cover no-repeat; min-height:340px;">
+    <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,8,28,.74) 0%,rgba(0,18,58,.62) 55%,rgba(0,10,38,.80) 100%);z-index:1;"></div>
+    <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,transparent,rgba(0,0,0,.20));z-index:1;pointer-events:none;"></div>
+    <div class="hero-content" style="position:relative;z-index:2;">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Upcoming Events &amp; News</span>
+      </nav>
+      <h1>Upcoming Events &amp; News</h1>
+      <p class="hero-subtitle" style="max-width:500px;">Your central resource for all INGED news &mdash; upcoming events, announcements, and reports from past activities.</p>
+    </div>
+  </section>
+
+  <!-- UPCOMING EVENTS -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-hd fade-in">
+        <span class="kicker">What's Coming</span>
+        <h2>Upcoming Events</h2>
+        <span class="rule"></span>
+      </div>
+
+      <div class="filter-bar fade-in">
+        <button class="filter-btn active" data-filter="all">All Events</button>
+        <button class="filter-btn" data-filter="conference">Conference</button>
+        <button class="filter-btn" data-filter="drama">Drama Festival</button>
+        <button class="filter-btn" data-filter="research">Research</button>
+      </div>
+
+      <div class="grid-3" id="eventsGrid">
+        <!-- Populated by data/events.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS & ANNOUNCEMENTS -->
+  <section class="section section-subtle">
+    <div class="container">
+      <div class="sec-hd fade-in">
+        <span class="kicker">Latest News</span>
+        <h2>News &amp; Announcements</h2>
+        <p>The latest updates from INGED &mdash; conference calls, project news, and community highlights.</p>
+        <span class="rule"></span>
+      </div>
+      <div id="newsGrid" style="display:flex;flex-direction:column;gap:14px;max-width:800px;">
+        <!-- Populated by data/news.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-band">
+    <div class="cta-band-inner fade-in">
+      <h2>Never Miss an INGED Event</h2>
+      <p>Become a member to receive the quarterly newsletter and priority notifications for all INGED events, workshops, and conference announcements.</p>
+      <div class="btn-group" style="justify-content:center;">
+        <a href="membership.html" class="btn btn-white btn-lg">Join INGED</a>
+        <a href="contact.html"   class="btn btn-white-outline btn-lg">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Data files — edit these to add/remove events and news -->
+  <script src="data/events.js"></script>
+  <script src="data/news.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+  (function () {
+
+    /* ── Category config ──────────────────────────────────── */
+    var CAT = {
+      conference:   { label: "Conference",     tag: "tag-navy",   stripe: "var(--navy)" },
+      drama:        { label: "Drama Festival", tag: "tag-purple", stripe: "#5b21b6" },
+      research:     { label: "Research",       tag: "tag-blue",   stripe: "#1a5fa0" },
+      workshop:     { label: "Workshop",       tag: "tag-green",  stripe: "#065f46" },
+      zoom:         { label: "Zoom Session",   tag: "tag-blue",   stripe: "#1a5fa0" },
+      announcement: { label: "Announcement",  tag: "tag-orange", stripe: "#92400e" }
+    };
+
+    function catInfo(key) {
+      return CAT[key] || { label: key, tag: "tag-navy", stripe: "var(--navy)" };
+    }
+
+    /* ── Render event cards ───────────────────────────────── */
+    function renderEvents(data) {
+      var grid = document.getElementById("eventsGrid");
+      if (!grid || !Array.isArray(data)) return;
+
+      grid.innerHTML = data.map(function (ev) {
+        var cat  = catInfo(ev.category);
+        var imgH = ev.image
+          ? '<div class="event-card-img" style="background-image:url(\'' + ev.image + '\');"></div>'
+          : '';
+        var btns = (ev.links || []).map(function (l, i) {
+          var cls    = l.style === "secondary" ? "btn btn-secondary btn-sm" : "btn btn-primary btn-sm";
+          var margin = l.style === "secondary" ? ' style="margin-left:8px;"' : '';
+          return '<a href="' + l.href + '" class="' + cls + '"' + margin + '>' + l.label + '</a>';
+        }).join('');
+
+        return [
+          '<div class="event-card fade-in" data-category="' + ev.category + '">',
+            imgH,
+            '<div class="event-card-top">',
+              '<span class="tag ' + cat.tag + '">' + cat.label + '</span>',
+              '<span style="font-size:.76rem;color:var(--text-light);font-weight:600;">' + (ev.dateShort || '') + '</span>',
+            '</div>',
+            '<div class="event-card-body">',
+              '<h4>' + ev.title + '</h4>',
+              '<div class="event-meta">' + ev.date + ' &middot; ' + ev.location + '</div>',
+              '<p style="font-size:.86rem;">' + ev.description + '</p>',
+            '</div>',
+            '<div class="event-footer">' + btns + '</div>',
+          '</div>'
+        ].join('');
+      }).join('');
+    }
+
+    /* ── Render news cards ────────────────────────────────── */
+    function renderNews(data) {
+      var container = document.getElementById("newsGrid");
+      if (!container || !Array.isArray(data)) return;
+
+      container.innerHTML = data.map(function (item) {
+        var cat        = catInfo(item.category);
+        var detailHref = item.id ? 'news-detail.html?id=' + item.id : '';
+        var readMore   = detailHref
+          ? '<a href="' + detailHref + '" style="color:var(--navy-mid);font-weight:600;font-size:.86rem;">Read more &rarr;</a>'
+          : '';
+        var cardClick  = detailHref
+          ? ' onclick="location.href=\'' + detailHref + '\'" style="cursor:pointer;"'
+          : '';
+        return [
+          '<div class="ncard fade-in"' + cardClick + '>',
+            '<div class="ncard-stripe" style="background:' + cat.stripe + ';"></div>',
+            '<div class="ncard-body">',
+              '<div style="display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap;">',
+                '<span class="tag ' + cat.tag + '">' + cat.label + '</span>',
+                '<span style="font-size:.78rem;color:var(--text-light);">' + (item.date || '') + '</span>',
+              '</div>',
+              '<h4 style="margin-bottom:7px;font-size:1.02rem;">' + item.title + '</h4>',
+              '<p style="font-size:.88rem;">' + item.body + '</p>',
+              readMore,
+            '</div>',
+          '</div>'
+        ].join('');
+      }).join('');
+    }
+
+    /* ── Filter buttons ───────────────────────────────────── */
+    function initFilters() {
+      var btns = document.querySelectorAll(".filter-btn");
+      var grid = document.getElementById("eventsGrid");
+
+      btns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          btns.forEach(function (b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          var filter = btn.getAttribute("data-filter");
+          grid.querySelectorAll(".event-card").forEach(function (card) {
+            card.style.display =
+              (filter === "all" || card.getAttribute("data-category") === filter) ? "" : "none";
+          });
+        });
+      });
+    }
+
+    /* ── Init ─────────────────────────────────────────────── */
+    renderEvents(typeof EVENTS_DATA !== "undefined" ? EVENTS_DATA : []);
+    renderNews(typeof NEWS_DATA     !== "undefined" ? NEWS_DATA   : []);
+    initFilters();
+
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+/**
+ * INGED News & Announcements Data
+ * ─────────────────────────────────────────────────────────────────
+ * To add a news item, copy one of the objects below and fill in
+ * your details. Items are displayed newest-first (top of the list).
+ *
+ * FIELDS:
+ *   id       – A short unique identifier with no spaces, e.g. "cfp-2026"
+ *              Used in the URL: news-detail.html?id=cfp-2026
+ *   title    – Headline (required)
+ *   date     – Display date, e.g. "March 2026"
+ *   category – One of: "conference" | "drama" | "research" | "workshop" |
+ *              "zoom" | "announcement" | "elter"
+ *              Items tagged "elter" appear on the ELTER page automatically.
+ *   image    – Optional single photo shown inside the article body (after the first paragraph).
+ *              e.g. "data/images/elter-2019.jpg"
+ *              Leave as "" or remove if no photo.
+ *   images   – Optional array of photos shown as a slider inside the article body.
+ *              Use this instead of "image" when you have more than one photo.
+ *              e.g. images: ["data/images/elter-2019-a.jpg", "data/images/elter-2019-b.jpg"]
+ *              If both "image" and "images" are set, "images" takes priority.
+ *   body     – Short summary shown on the news card (1-2 sentences)
+ *   fullText – The full article, as an array of paragraphs.
+ *              Each item in the array is one paragraph of text.
+ *   pdf      – Optional PDF attachment shown as a download button in the article.
+ *                label – Button text, e.g. "Download Programme"
+ *                href  – Path to the PDF file, e.g. "data/pdfs/elter-2019-programme.pdf"
+ * ─────────────────────────────────────────────────────────────────
+ */
+
+const NEWS_DATA = [
+
+  {
+    id:       "cfp-2026",
+    title:    "Call for Papers: 23rd INGED International ELT Conference",
+    date:     "March 2026",
+    category: "conference",
+    image:    "",
+    body:     "The Call for Papers for the 23rd INGED International ELT Conference will be published ahead of the abstract deadline. Abstract submission deadline (Round 1): August 1, 2026.",
+    fullText: [
+      "The Call for Papers for the 23rd INGED International ELT Conference will be published ahead of the abstract submission deadline. We invite English language teachers, researchers, teacher educators, and graduate students to submit proposals for presentations, workshops, and poster sessions.",
+      "The conference will take place at Tokat Gaziosmanpa\u015fa University, November 6\u20138, 2026, bringing together ELT professionals from Turkey and across the world.",
+      "Abstract submission deadline (Round 1): August 1, 2026. Abstracts should be 200\u2013250 words and submitted via the conference submission portal. Accepted presenters will be notified by September 1, 2026.",
+      "For full details on submission guidelines, themes, and keynote speakers, please visit the conference page."
+    ]
+  },
+
+  {
+    id:       "elter-2019",
+    title:    "8th ELTER Colloquium at Gazi University",
+    date:     "22 June 2019",
+    category: "elter",
+    image:    "data/images/elter-2019-a.jpg",
+    body:     "The 8th ELTER Colloquium was hosted by the School of Foreign Languages, Gazi University. The summary of the event will soon be online.",
+    fullText: [
+      "The 8th ELTER Colloquium was hosted by the School of Foreign Languages, Gazi University. The summary of the event will soon be online.",
+      "The programme details were as follows:"
+    ],
+    pdf: {
+      label: "Download Programme",
+      href:  "data/pdfs/elter-2019-programme.pdf"
+    }
+  }
+
+];

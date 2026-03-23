@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — INGED</title>
+  <meta name="description" content="Get in touch with INGED — the English Language Education Association. Contact form, email, and Ankara office details.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="hero hero-inner" style="background:url('banners/contact.jpg') center 40% / cover no-repeat; min-height:300px;">
+    <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,8,28,.74) 0%,rgba(0,18,58,.62) 55%,rgba(0,10,38,.80) 100%);z-index:1;"></div>
+    <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,transparent,rgba(0,0,0,.20));z-index:1;pointer-events:none;"></div>
+    <div class="hero-content" style="position:relative;z-index:2;">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Contact</span>
+      </nav>
+      <h1>Get in Touch</h1>
+      <p class="hero-subtitle" style="max-width:440px;">Whether you have a question or would like to register for an event &mdash; we'd be glad to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT MAIN -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap:56px;align-items:start;">
+
+        <!-- FORM -->
+        <div class="fade-in">
+          <div class="sec-hd">
+            <span class="kicker">Send a Message</span>
+            <h2>Contact Form</h2>
+            <span class="rule"></span>
+          </div>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Please select a topic</option>
+                <option value="membership">Membership Enquiry</option>
+                <option value="conference">Conference &amp; Registration</option>
+                <option value="elter">ELTER Research Group</option>
+                <option value="drama">Drama Festivals</option>
+                <option value="pd">Professional Development</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Please write your message here..." required></textarea>
+            </div>
+            <div class="form-group">
+              <label style="display:flex;align-items:flex-start;gap:10px;font-weight:400;cursor:pointer;">
+                <input type="checkbox" id="newsletter" name="newsletter" value="yes" style="width:auto;margin-top:3px;flex-shrink:0;">
+                <span style="font-size:.86rem;">I would like to subscribe to the INGED newsletter for updates and event announcements.</span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message</button>
+          </form>
+        </div>
+
+        <!-- CONTACT DETAILS -->
+        <div class="fade-in fade-in-d1">
+          <div class="sec-hd">
+            <span class="kicker">Contact Details</span>
+            <h2>Reach Us Directly</h2>
+            <span class="rule"></span>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:36px;">
+            <div class="fcard">
+              <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:6px;">Email</div>
+              <a href="mailto:ingedturkiye@gmail.com" style="color:var(--navy-mid);font-weight:600;font-size:.95rem;">ingedturkiye@gmail.com</a>
+            </div>
+            <div class="fcard">
+              <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:6px;">Address</div>
+              <p style="margin:0;font-size:.9rem;">INGED &mdash; İngilizce Eğitimi Derneği<br>Bağlar Caddesi No: 226/1<br>Yukarı Ayrancı, 06680<br>Ankara, Turkey</p>
+            </div>
+            <div class="fcard">
+              <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:6px;">Website</div>
+              <span style="color:var(--navy-mid);font-weight:600;font-size:.9rem;">inged.org.tr</span>
+            </div>
+          </div>
+
+          <div style="margin-bottom:36px;">
+            <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:12px;">Follow INGED</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <a href="https://www.instagram.com/ingedturkiye/" target="_blank" rel="noopener" class="btn btn-sm" style="background:#E4405F;color:#fff;border-color:#E4405F;"><i class="fa-brands fa-instagram" style="margin-right:6px;"></i>Instagram</a>
+              <a href="https://www.facebook.com/INGEDTURKEY/" target="_blank" rel="noopener" class="btn btn-sm" style="background:#1877F2;color:#fff;border-color:#1877F2;"><i class="fa-brands fa-facebook-f" style="margin-right:6px;"></i>Facebook</a>
+              <a href="https://www.youtube.com/@INGEDTurkiye/" target="_blank" rel="noopener" class="btn btn-sm" style="background:#FF0000;color:#fff;border-color:#FF0000;"><i class="fa-brands fa-youtube" style="margin-right:6px;"></i>YouTube</a>
+              <a href="https://tr.linkedin.com/company/ingedturkey" target="_blank" rel="noopener" class="btn btn-sm" style="background:#0A66C2;color:#fff;border-color:#0A66C2;"><i class="fa-brands fa-linkedin-in" style="margin-right:6px;"></i>LinkedIn</a>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:12px;">Find Us in Ankara</div>
+            <div style="border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);">
+              <iframe
+                src="https://maps.google.com/maps?q=Ba%C4%9Flar+Caddesi+No:+226%2F1+Yukar%C4%B1+Ayranc%C4%B1+06680+Ankara+Turkey&output=embed&hl=en"
+                width="100%" height="260"
+                style="border:0;display:block;"
+                allowfullscreen loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="INGED Office Location"></iframe>
+            </div>
+            <p style="margin:8px 0 0;font-size:.78rem;color:var(--text-light);">
+              <a href="https://maps.app.goo.gl/b9BwNT6g7hcGHuY79" target="_blank" rel="noopener" style="color:var(--navy-mid);">Open in Google Maps →</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS -->
+  <section class="section section-subtle">
+    <div class="container">
+      <div class="sec-hd fade-in">
+        <span class="kicker">Useful Links</span>
+        <h2>You May Also Be Looking For</h2>
+        <span class="rule"></span>
+      </div>
+      <div class="grid-4">
+        <a href="membership.html" class="prog-card fade-in" style="text-decoration:none;color:inherit;">
+          <div class="prog-card-bar"></div>
+          <div class="prog-card-body">
+            <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--navy-mid);margin-bottom:6px;">Membership</div>
+            <h3 style="font-size:.95rem;margin-bottom:6px;">Join INGED</h3>
+            <p style="font-size:.84rem;">Become a member and access all INGED benefits.</p>
+          </div>
+        </a>
+        <a href="conference.html" class="prog-card fade-in fade-in-d1" style="text-decoration:none;color:inherit;">
+          <div class="prog-card-bar"></div>
+          <div class="prog-card-body">
+            <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--navy-mid);margin-bottom:6px;">Conference</div>
+            <h3 style="font-size:.95rem;margin-bottom:6px;">Conference Info</h3>
+            <p style="font-size:.84rem;">Learn about the 23rd INGED International ELT Conference.</p>
+          </div>
+        </a>
+        <a href="drama.html" class="prog-card fade-in fade-in-d2" style="text-decoration:none;color:inherit;">
+          <div class="prog-card-bar" style="background:#6d28d9;"></div>
+          <div class="prog-card-body">
+            <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#6d28d9;margin-bottom:6px;">Drama Festivals</div>
+            <h3 style="font-size:.95rem;margin-bottom:6px;">Drama Festivals</h3>
+            <p style="font-size:.84rem;">Register your school for the 2026 festival in Ankara.</p>
+          </div>
+        </a>
+        <a href="professional-development.html" class="prog-card fade-in fade-in-d3" style="text-decoration:none;color:inherit;">
+          <div class="prog-card-bar" style="background:#059669;"></div>
+          <div class="prog-card-body">
+            <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#059669;margin-bottom:6px;">PD</div>
+            <h3 style="font-size:.95rem;margin-bottom:6px;">PD Programs</h3>
+            <p style="font-size:.84rem;">Browse Zoom sessions and the quarterly newsletter archive.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
