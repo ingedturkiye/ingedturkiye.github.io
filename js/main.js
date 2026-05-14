@@ -50,6 +50,10 @@ const NAV_HTML = `
             <div class="dropdown-item-label">Professional Development</div>
             <div class="dropdown-item-desc">Zoom Seminar Series &amp; Newsletter</div>
           </a>
+          <a href="projects.html" class="dropdown-item">
+            <div class="dropdown-item-label">Projects &amp; Partnerships</div>
+            <div class="dropdown-item-desc">British Council collaboration &amp; international affiliations</div>
+          </a>
         </div>
       </div>
 
@@ -78,6 +82,7 @@ const NAV_HTML = `
   <a href="elter.html"                   class="mobile-sub-link" data-page="elter">ELTER Research Group</a>
   <a href="drama.html"                   class="mobile-sub-link" data-page="drama">Drama Festivals</a>
   <a href="professional-development.html" class="mobile-sub-link" data-page="professional-development">Professional Development</a>
+  <a href="projects.html"                class="mobile-sub-link" data-page="projects">Projects &amp; Partnerships</a>
   <div class="mobile-divider"></div>
   <a href="events.html"     class="mobile-link" data-page="events">Upcoming Events &amp; News</a>
   <a href="membership.html" class="mobile-link" data-page="membership">Membership</a>
