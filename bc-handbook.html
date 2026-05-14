@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology-Enhanced Lesson Planning for 21st-Century Skills — INGED &amp; British Council</title>
+  <meta name="description" content="A British Council–INGED partnership project: 60 selected English language teaching professionals co-create an open-access handbook on smart lesson planning and 21st-century skills (Oct 2025 – Jun 2026).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ---------- Project page–specific bits ---------- */
+    .stat-row{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:14px;margin-top:8px;
+    }
+    .stat-card{
+      background:var(--white);border:1px solid var(--border);
+      border-top:3px solid var(--navy-mid);border-radius:var(--radius-md);
+      padding:18px 18px 16px;
+    }
+    .stat-card .num{
+      font-family:'Montserrat',sans-serif;font-weight:800;
+      font-size:1.55rem;color:var(--navy);line-height:1.1;margin-bottom:4px;
+    }
+    .stat-card .lbl{
+      font-size:.78rem;color:var(--text-light);
+      text-transform:uppercase;letter-spacing:.08em;font-weight:600;
+    }
+
+    /* Phases / programme timeline */
+    .phase{
+      background:var(--white);border:1px solid var(--border);
+      border-radius:var(--radius-md);overflow:hidden;margin-bottom:18px;
+    }
+    .phase-hd{
+      display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+      padding:14px 22px;background:var(--bg-subtle);
+      border-bottom:1px solid var(--border);
+    }
+    .phase-num{
+      width:34px;height:34px;border-radius:50%;
+      background:var(--navy);color:#fff;
+      display:flex;align-items:center;justify-content:center;
+      font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;
+      flex-shrink:0;
+    }
+    .phase-title{
+      font-family:'Montserrat',sans-serif;font-weight:700;
+      font-size:1.02rem;color:var(--text);margin:0;
+    }
+    .phase-meta{
+      margin-left:auto;font-size:.78rem;color:var(--text-light);
+      font-weight:600;
+    }
+    .phase-body{padding:18px 22px 20px;}
+    .phase-body p{font-size:.9rem;}
+    .phase-body ul{margin:6px 0 0 0;padding:0;list-style:none;}
+    .phase-body ul li{
+      position:relative;padding:6px 0 6px 20px;font-size:.88rem;
+      color:var(--text-mid);border-bottom:1px dashed var(--border);
+    }
+    .phase-body ul li:last-child{border-bottom:none;}
+    .phase-body ul li::before{
+      content:"";position:absolute;left:4px;top:14px;
+      width:6px;height:6px;border-radius:50%;background:var(--blue);
+    }
+    .phase-body ul li strong{color:var(--text);}
+
+    /* Compact week table for the 5-week run */
+    .week-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:12px;margin-top:10px;
+    }
+    .week-card{
+      background:var(--white);border:1px solid var(--border);
+      border-left:3px solid var(--blue);border-radius:var(--radius-md);
+      padding:14px 16px;
+    }
+    .week-card .wk-no{
+      font-size:.7rem;font-weight:700;text-transform:uppercase;
+      letter-spacing:.1em;color:var(--blue);margin-bottom:4px;
+    }
+    .week-card .wk-date{
+      font-family:'Montserrat',sans-serif;font-weight:700;
+      font-size:.95rem;color:var(--text);margin-bottom:6px;
+    }
+    .week-card .wk-focus{font-size:.82rem;color:var(--text-mid);line-height:1.5;}
+
+    /* Logo strip in hero */
+    .partner-strip{
+      display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .partner-strip .chip{
+      display:inline-flex;align-items:center;gap:10px;
+      background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);
+      padding:6px 14px;border-radius:30px;color:#fff;font-size:.82rem;
+      font-weight:600;
+    }
+    .partner-strip .chip img{
+      height:20px;width:auto;display:block;object-fit:contain;
+    }
+  </style>
+</head>
+<body data-page="bc-handbook">
+
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="hero hero-inner" style="background:linear-gradient(150deg,#001533 0%,#002060 40%,#003399 75%,#1a5fa0 100%); min-height:340px;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(74,144,217,.30) 0%,transparent 60%);z-index:1;pointer-events:none;"></div>
+    <div class="hero-content" style="position:relative;z-index:2;">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="projects.html">Projects &amp; Partnerships</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Technology-Enhanced Lesson Planning</span>
+      </nav>
+      <h1>Technology-Enhanced Lesson Planning for 21st-Century Skills</h1>
+      <p class="hero-subtitle" style="max-width:640px;">
+        A British Council &ndash; INGED partnership project bringing 60 English language teaching professionals together to co-create an open-access handbook on smart lesson planning and 21st-century skills.
+      </p>
+      <div class="partner-strip">
+        <span class="chip"><i class="fa-regular fa-calendar"></i> October 2025 &ndash; June 2026</span>
+        <span class="chip"><i class="fa-solid fa-users"></i> 60 selected participants</span>
+        <span class="chip"><i class="fa-solid fa-handshake"></i> British Council &times; INGED</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap:56px;align-items:start;">
+        <div class="fade-in">
+          <div class="sec-hd">
+            <span class="kicker">About the Project</span>
+            <h2>A collaborative path to a smarter lesson</h2>
+            <span class="rule"></span>
+          </div>
+          <p>
+            <em>Technology-Enhanced Lesson Planning for 21st-Century Skills</em> is a year-long professional development and co-authoring project run by <strong>INGED</strong> in partnership with the <strong>British Council</strong>. Sixty selected teachers and teacher educators move through an intensive online training cycle, then work together through a sequence of writing workshops to produce an <strong>open-access handbook</strong> on smart lesson planning and 21st-century skills.
+          </p>
+          <p>
+            The programme combines synchronous evening webinars on Zoom with asynchronous WhatsApp discussions, draws directly on the British Council&rsquo;s TeachingEnglish tools and model lesson plans, and feeds insights from a national face-to-face showcase and three regional training days into the final handbook.
+          </p>
+          <p>
+            Some volunteer participants also take part in additional dissemination events &mdash; a national showcase in Bursa, and three regional training days that bring the handbook to wider Communities of Practice across Turkey.
+          </p>
+        </div>
+
+        <div class="fade-in fade-in-d1">
+          <div class="sec-hd">
+            <span class="kicker">At a Glance</span>
+            <h2>Key facts</h2>
+            <span class="rule"></span>
+          </div>
+          <div class="stat-row">
+            <div class="stat-card">
+              <div class="num">60</div>
+              <div class="lbl">Selected participants</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">9</div>
+              <div class="lbl">Mandatory online events</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">4</div>
+              <div class="lbl">Face-to-face events</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">1</div>
+              <div class="lbl">Open-access handbook</div>
+            </div>
+          </div>
+
+          <div class="fcard" style="margin-top:18px;border-left:3px solid var(--navy);">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:700;margin-bottom:4px;">Funding &amp; partnership</div>
+            <p style="margin:0;font-size:.88rem;">
+              Funded by the British Council. All expenses for the face-to-face events &mdash; organisation, travel, accommodation, and food &mdash; are fully covered by the project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HANDBOOK DOWNLOAD -->
+  <section class="section-sm">
+    <div class="container">
+      <a href="bc_handbook/THE-BRITISHCOUNCIL-INGED-HANDBOOK.pdf" target="_blank" rel="noopener"
+         class="fade-in"
+         style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+                background:linear-gradient(135deg,var(--navy) 0%,#162f5e 100%);
+                border-radius:var(--radius);padding:28px 32px;text-decoration:none;
+                transition:opacity .2s;"
+         onmouseover="this.style.opacity='.92'" onmouseout="this.style.opacity='1'">
+        <div style="width:56px;height:56px;background:rgba(255,255,255,.12);border-radius:var(--radius-md);
+                    display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <i class="fa-solid fa-file-pdf" style="color:white;font-size:1.6rem;"></i>
+        </div>
+        <div style="flex:1;min-width:180px;">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:700;color:white;font-size:1rem;margin-bottom:5px;">
+            British Council &ndash; INGED Project Handbook
+          </div>
+          <p style="margin:0;color:rgba(255,255,255,.65);font-size:.86rem;line-height:1.5;">
+            Full project handbook: objectives, participant pathway, training schedule, workshop content, and dissemination plan.
+          </p>
+        </div>
+        <div style="display:inline-flex;align-items:center;gap:10px;padding:12px 22px;
+                    background:white;color:var(--navy);font-family:'Montserrat',sans-serif;
+                    font-weight:700;font-size:.86rem;border-radius:var(--radius-md);white-space:nowrap;flex-shrink:0;">
+          <i class="fa-solid fa-download"></i>
+          Download PDF
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- PROGRAMME -->
+  <section class="section section-subtle">
+    <div class="container">
+      <div class="sec-hd fade-in">
+        <span class="kicker">Programme</span>
+        <h2>Mandatory online events</h2>
+        <p>All 60 selected participants take part in the full online programme: a kick-off webinar, a five-week evening training cycle, three academic publishing and writing workshops, and a closing celebration.</p>
+        <span class="rule"></span>
+      </div>
+
+      <!-- Phase 1 — Kick-off -->
+      <div class="phase fade-in">
+        <div class="phase-hd">
+          <div class="phase-num">1</div>
+          <h3 class="phase-title">Kick-off Webinar</h3>
+          <span class="phase-meta">17 October 2025 &middot; Evening &middot; Online</span>
+        </div>
+        <div class="phase-body">
+          <p>A country-wide online webinar opening the project. Participants meet the team, walk through the project road map, and get a guided showcase of the British Council&rsquo;s TeachingEnglish tools that will underpin the rest of the programme.</p>
+        </div>
+      </div>
+
+      <!-- Phase 2 — 5-week training -->
+      <div class="phase fade-in">
+        <div class="phase-hd">
+          <div class="phase-num">2</div>
+          <h3 class="phase-title">Five-Week Online Training</h3>
+          <span class="phase-meta">24 Oct &ndash; 21 Nov 2025 &middot; Zoom + WhatsApp</span>
+        </div>
+        <div class="phase-body">
+          <p>Each week, materials are shared in advance, followed by a synchronous evening reflection session on Zoom and asynchronous WhatsApp discussions during the week. The focus is on <strong>lesson and course planning</strong>, expanded over the second half to include the <strong>integration of technology and 21st-century skills</strong>.</p>
+          <div class="week-grid">
+            <div class="week-card">
+              <div class="wk-no">Week 1</div>
+              <div class="wk-date">24 Oct 2025</div>
+              <div class="wk-focus">Lesson &amp; course planning skills</div>
+            </div>
+            <div class="week-card">
+              <div class="wk-no">Week 2</div>
+              <div class="wk-date">31 Oct 2025</div>
+              <div class="wk-focus">Lesson &amp; course planning skills</div>
+            </div>
+            <div class="week-card">
+              <div class="wk-no">Week 3</div>
+              <div class="wk-date">7 Nov 2025</div>
+              <div class="wk-focus">Planning + technology &amp; 21st-century skills</div>
+            </div>
+            <div class="week-card">
+              <div class="wk-no">Week 4</div>
+              <div class="wk-date">14 Nov 2025</div>
+              <div class="wk-focus">Planning + technology &amp; 21st-century skills</div>
+            </div>
+            <div class="week-card">
+              <div class="wk-no">Week 5</div>
+              <div class="wk-date">21 Nov 2025</div>
+              <div class="wk-focus">Planning + technology &amp; 21st-century skills</div>
+            </div>
+          </div>
+          <p style="margin-top:14px;font-size:.88rem;"><strong>Output:</strong> the collaborative writing of an open-access handbook on smart lesson planning and 21st-century skills begins.</p>
+        </div>
+      </div>
+
+      <!-- Phase 3 — Writing workshops -->
+      <div class="phase fade-in">
+        <div class="phase-hd">
+          <div class="phase-num">3</div>
+          <h3 class="phase-title">Academic Publishing &amp; Writing Workshops</h3>
+          <span class="phase-meta">Jan &ndash; Mar 2026 &middot; Evening &middot; Online</span>
+        </div>
+        <div class="phase-body">
+          <p>Three evening workshops where participants continue work on the open-access handbook and revise &amp; adapt TeachingEnglish materials and model lesson plans.</p>
+          <ul>
+            <li><strong>09 January 2026</strong> &mdash; handbook drafting and editorial guidance</li>
+            <li><strong>13 February 2026</strong> &mdash; revising and adapting TeachingEnglish materials</li>
+            <li><strong>13 March 2026</strong> &mdash; model lesson plans and peer review</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 4 — Closing -->
+      <div class="phase fade-in">
+        <div class="phase-hd">
+          <div class="phase-num">4</div>
+          <h3 class="phase-title">Project Closing Celebration</h3>
+          <span class="phase-meta">19 June 2026 &middot; Online</span>
+        </div>
+        <div class="phase-body">
+          <p>An online celebration and competition open to English teaching professionals and stakeholders, showcasing the achievements of the cohort and marking the formal end of the project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACE-TO-FACE EVENTS -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-hd fade-in">
+        <span class="kicker">Dissemination</span>
+        <h2>Face-to-face events</h2>
+        <p>These events are voluntary. If there are no volunteers, hosts and participants may be selected randomly &mdash; so any participant could be invited to take part. All expenses (organisation, travel, accommodation, and food) are fully covered by the project.</p>
+        <span class="rule"></span>
+      </div>
+
+      <div class="grid-2" style="gap:18px;">
+
+        <div class="card fade-in">
+          <div style="height:4px;background:var(--navy);"></div>
+          <div class="card-body">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:6px;">
+              <span class="tag tag-navy">National Showcase</span>
+              <span style="font-size:.78rem;color:var(--text-light);font-weight:600;">26 December 2025</span>
+            </div>
+            <h4 style="font-size:1rem;margin-bottom:8px;">National Showcase Event &mdash; Bursa</h4>
+            <p style="font-size:.88rem;">Open to English teaching professionals and stakeholders. Sub-theme presentations, classroom examples, lesson-planning priorities, panels, interactive exhibits, and networking. Insights from the day feed directly into the final handbook.</p>
+            <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:.82rem;color:var(--text-light);">
+              <strong style="color:var(--text);">Location:</strong> Bursa &middot; <strong style="color:var(--text);">Output:</strong> insights into the handbook
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in fade-in-d1">
+          <div style="height:4px;background:var(--blue);"></div>
+          <div class="card-body">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:6px;">
+              <span class="tag tag-blue">Regional Training</span>
+              <span style="font-size:.78rem;color:var(--text-light);font-weight:600;">April &ndash; May 2026</span>
+            </div>
+            <h4 style="font-size:1rem;margin-bottom:8px;">Regional Training Days &mdash; 3 regions</h4>
+            <p style="font-size:.88rem;">One event per region, three events in total. Dates and locations to be confirmed. Each day is hosted by a volunteer participant and is open to English teaching professionals and stakeholders &mdash; the aim is to disseminate the handbook to more teachers in regional Communities of Practice.</p>
+            <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:.82rem;color:var(--text-light);">
+              <strong style="color:var(--text);">Host:</strong> volunteer participants (may be randomly selected if no volunteers) &middot; <strong style="color:var(--text);">Audience:</strong> regional CoPs
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="info-box fade-in" style="margin-top:22px;">
+        <div>
+          <strong style="display:block;margin-bottom:4px;color:var(--navy);">Please note</strong>
+          Additional online meetings may be scheduled during the process if required.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="section section-subtle">
+    <div class="container">
+      <div class="sec-hd fade-in">
+        <span class="kicker">Partnership</span>
+        <h2>British Council &times; INGED</h2>
+        <span class="rule"></span>
+      </div>
+      <div class="grid-2" style="gap:30px;align-items:center;">
+        <div class="fcard fade-in" style="display:flex;align-items:center;gap:18px;border-left:3px solid var(--navy);">
+          <img src="logos/British_Council_logo.svg.png" alt="British Council" style="height:60px;width:auto;object-fit:contain;flex-shrink:0;">
+          <div>
+            <div style="font-family:'Montserrat',sans-serif;font-weight:700;margin-bottom:4px;">British Council</div>
+            <p style="margin:0;font-size:.88rem;">Funder and content partner. Provides the TeachingEnglish tools, model lesson plans, and editorial support that underpin the programme.</p>
+          </div>
+        </div>
+        <div class="fcard fade-in fade-in-d1" style="display:flex;align-items:center;gap:18px;border-left:3px solid var(--navy);">
+          <img src="logos/inged.jpeg" alt="INGED" style="height:60px;width:auto;object-fit:contain;flex-shrink:0;">
+          <div>
+            <div style="font-family:'Montserrat',sans-serif;font-weight:700;margin-bottom:4px;">INGED &mdash; İngilizce Eğitimi Derneği</div>
+            <p style="margin:0;font-size:.88rem;">Project coordinator. Convenes the cohort, runs the online and face-to-face programme, and edits the open-access handbook.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-band">
+    <div class="cta-band-inner fade-in">
+      <h2>Interested in this project?</h2>
+      <p>Selected participants and partner institutions can reach the project team through INGED. Get in touch for more information about future cohorts or to follow the handbook&rsquo;s publication.</p>
+      <div class="btn-group" style="justify-content:center;">
+        <a href="bc_handbook/THE-BRITISHCOUNCIL-INGED-HANDBOOK.pdf" target="_blank" rel="noopener" class="btn btn-white btn-lg">
+          <i class="fa-solid fa-file-pdf" style="margin-right:8px;"></i>Download Handbook
+        </a>
+        <a href="contact.html" class="btn btn-white-outline btn-lg">Contact INGED</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
