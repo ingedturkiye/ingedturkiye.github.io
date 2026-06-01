@@ -332,11 +332,7 @@
       }).join('');
     }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', renderConfNews);
-    } else {
-      renderConfNews();
-    }
+    renderConfNews();
   })();
   </script>
 </body>
