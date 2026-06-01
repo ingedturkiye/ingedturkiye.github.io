@@ -68,7 +68,7 @@ const NEWS_DATA = [
     title:    "Call for Papers: 23rd INGED International ELT Conference",
     date:     "March 2026",
     category: "conference",
-    image:    "",
+    image:    "data/images/conference-2026.jpg",
     body:     "The Call for Papers for the 23rd INGED International ELT Conference will be published ahead of the abstract deadline. Abstract submission deadline (Round 1): August 1, 2026.",
     fullText: [
       "The Call for Papers for the 23rd INGED International ELT Conference will be published ahead of the abstract submission deadline. We invite English language teachers, researchers, teacher educators, and graduate students to submit proposals for presentations, workshops, and poster sessions.",
