@@ -31,6 +31,19 @@
 const NEWS_DATA = [
 
   {
+    id:       "elter-2026",
+    title:    "12th INGED ELTER SIG Meeting at Boğaziçi University",
+    date:     "19 June 2026",
+    category: "elter",
+    image:    "elter/ELTER2026-1.png",
+    body:     "The 12th INGED ELTER Special Interest Group Meeting will be held on June 19, 2026 (Friday) at Boğaziçi University, Department of Foreign Language Education. This is a one-day event.",
+    fullText: [
+      "The 12th INGED ELTER (English Language Teacher Education Research) Special Interest Group Meeting will take place on Friday, June 19, 2026 at the Department of Foreign Language Education, Boğaziçi University.",
+      "This is a one-day event. All those interested in English language teacher education research are welcome to attend."
+    ]
+  },
+
+  {
     id:       "cfp-2026",
     title:    "Call for Papers: 23rd INGED International ELT Conference",
     date:     "March 2026",
