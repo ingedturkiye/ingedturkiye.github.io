@@ -257,7 +257,87 @@
     </div>
   </div>
 
+  <!-- CONFERENCE NEWS (from data/news.js, category: "conference") -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-hd fade-in">
+        <span class="kicker">Latest</span>
+        <h2>Conference News</h2>
+        <span class="rule"></span>
+      </div>
+      <div id="confNewsGrid" style="display:flex;flex-direction:column;gap:14px;max-width:800px;">
+        <!-- Populated by JS from data/news.js (category: "conference") -->
+      </div>
+      <p id="confNewsEmpty" style="display:none;color:var(--text-light);font-size:.92rem;margin-top:8px;">No conference news items yet. Check back soon.</p>
+    </div>
+  </section>
+
   <div id="footer-placeholder"></div>
+  <script src="data/news.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+  (function () {
+    var CAT = {
+      conference:   { label: "Conference",     tag: "tag-navy",   stripe: "var(--navy)" },
+      drama:        { label: "Drama Festival", tag: "tag-purple", stripe: "#5b21b6" },
+      research:     { label: "Research",       tag: "tag-blue",   stripe: "#1a5fa0" },
+      workshop:     { label: "Workshop",       tag: "tag-green",  stripe: "#065f46" },
+      zoom:         { label: "Zoom Session",   tag: "tag-blue",   stripe: "#1a5fa0" },
+      announcement: { label: "Announcement",  tag: "tag-orange", stripe: "#92400e" },
+      elter:        { label: "ELTER",          tag: "tag-blue",   stripe: "#1a5fa0" }
+    };
+
+    function catInfo(key) {
+      return CAT[key] || { label: key, tag: "tag-navy", stripe: "var(--navy)" };
+    }
+
+    function renderConfNews() {
+      var container = document.getElementById("confNewsGrid");
+      var empty     = document.getElementById("confNewsEmpty");
+      if (!container) return;
+
+      var data     = typeof NEWS_DATA !== "undefined" ? NEWS_DATA : [];
+      var confNews = data.filter(function (item) { return item.category === "conference"; });
+
+      if (confNews.length === 0) {
+        container.style.display = "none";
+        empty.style.display     = "block";
+        return;
+      }
+
+      container.innerHTML = confNews.map(function (item) {
+        var cat        = catInfo(item.category);
+        var detailHref = item.id ? 'news-detail.html?id=' + item.id : '';
+        var readMore   = detailHref
+          ? '<a href="' + detailHref + '" style="color:var(--navy-mid);font-weight:600;font-size:.86rem;">Read more &rarr;</a>'
+          : '';
+        var cardClick  = detailHref
+          ? ' onclick="location.href=\'' + detailHref + '\'" style="cursor:pointer;"'
+          : '';
+        return [
+          '<div class="ncard fade-in"' + cardClick + '>',
+            '<div class="ncard-stripe" style="background:' + cat.stripe + ';"></div>',
+            '<div class="ncard-body">',
+              '<div style="display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap;">',
+                '<span class="tag ' + cat.tag + '">' + cat.label + '</span>',
+                '<span style="font-size:.78rem;color:var(--text-light);">' + (item.date || '') + '</span>',
+              '</div>',
+              '<h4 style="margin-bottom:7px;font-size:1.02rem;">' + item.title + '</h4>',
+              '<p style="font-size:.88rem;">' + item.body + '</p>',
+              readMore,
+            '</div>',
+          '</div>'
+        ].join('');
+      }).join('');
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', renderConfNews);
+    } else {
+      renderConfNews();
+    }
+  })();
+  </script>
 </body>
 </html>
