@@ -31,6 +31,26 @@
 const NEWS_DATA = [
 
   {
+    id:       "plenary-odowd-2026",
+    title:    "Plenary Speaker Announcement: Prof. Robert O'Dowd",
+    date:     "November 2026",
+    category: "conference",
+    image:    "data/images/robert-o-dowd.jpeg",
+    body:     "We are delighted to announce Professor Robert O'Dowd (Universidad de León, Spain) as a plenary speaker at the 23rd INGED International ELT Conference. His talk is titled \"Virtual Exchange at a Crossroads: Navigating Pedagogical and Ethical Challenges in Foreign Language Education.\"",
+    fullText: [
+      "We are delighted to announce Professor Robert O'Dowd from the Universidad de León, Spain, as a plenary speaker at the 23rd INGED International ELT Conference (Tokat Gaziosmanpaşa University, November 6–8, 2026).",
+      "<strong>Talk Title:</strong> Virtual Exchange at a Crossroads: Navigating Pedagogical and Ethical Challenges in Foreign Language Education",
+      "Virtual Exchange (VE) refers to the numerous online learning initiatives and methodologies which bring learners in online collaborative projects together with partners from different cultural backgrounds as part of their study programmes and under the guidance of teachers or trained facilitators. Its potential for giving learners authentic experiences of intercultural communication has made it a common practice in foreign language classrooms. However, VE in foreign language education has evolved significantly in recent years from its early focus on bilingual North-North partnerships to encompass diverse global collaborations, including North-South exchanges and partnerships with conflict zones.",
+      "While VE has gained increased recognition as a valuable tool for internationalisation, particularly following COVID-19, this expansion has generated complex pedagogical and ethical challenges that practitioners must navigate. In this presentation Prof. O'Dowd will examine six critical areas of concern: structural inequalities in project design that risk reproducing Global North hegemony; communication barriers in lingua franca contexts that advantage privileged learners; the psychological risks of engaging students with conflict zone partners; political and institutional pressures surrounding controversial partnerships; questions about VE's capacity for genuine social impact versus tokenistic engagement; and maintaining motivation among increasingly internationally-experienced student populations.",
+      "Drawing on recent literature and over two decades of practice, he argues that VE's transition from niche activity to mainstream educational tool demands more sophisticated approaches that address power imbalances, provide robust linguistic scaffolding, implement trauma-informed protocols, and move beyond superficial intercultural encounters. The talk will conclude with recommendations for developing more equitable, effective, and engaging VE programmes that can navigate the tensions between educational aspirations and global realities.",
+      "<strong>About the Speaker</strong>",
+      "Robert O'Dowd is Full Professor for English Studies at the Universidad de León, Spain. A native of Ireland, he has taught at universities in Ireland, Germany, and Spain. He has published extensively on the application of Virtual Exchange and Blended Mobility in higher education and has been invited to deliver plenary speeches at international conferences in the US, Asia, and across Europe.",
+      "As coordinator of three Erasmus+ projects, including the European Policy Experiment 'Virtual Innovation and Support Networks for Teachers' (VALIANT), he has regularly collaborated with universities and organizations on the promotion and integration of Virtual Exchange in higher education. His most recent books are <em>Internationalising Higher Education and the Role of Virtual Exchange</em> (2023, Routledge) and the co-edited volume <em>Virtual Innovation and Support Networks</em> (2024, Peter Lang).",
+      "He has been recognized in Stanford University's 'Ranking of the World Scientists: World's Top 2% Scientists' from 2023 to 2025. He also works regularly as an expert evaluator for the European Commission and is a consultant in the field of Language Education Policy and Practice for the Council of Europe."
+    ]
+  },
+
+  {
     id:       "elter-2026",
     title:    "12th INGED ELTER SIG Meeting at Boğaziçi University",
     date:     "19 June 2026",
