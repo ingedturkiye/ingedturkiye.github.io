@@ -277,6 +277,25 @@
         return (i === 0 && imageBlockHtml) ? para + imageBlockHtml : para;
       }).join('');
 
+      /* ── External link button ── */
+      var linkHtml = '';
+      if (item.link && item.link.href) {
+        linkHtml = [
+          '<a href="' + item.link.href + '" target="_blank" rel="noopener"',
+          '   style="display:inline-flex;align-items:center;gap:8px;',
+          '          margin-top:8px;margin-bottom:4px;padding:10px 22px;',
+          '          background:var(--navy);color:#fff;border-radius:var(--radius);',
+          '          font-size:.92rem;font-weight:700;text-decoration:none;',
+          '          transition:opacity .18s;" onmouseover="this.style.opacity=\'.82\'"',
+          '          onmouseout="this.style.opacity=\'1\'">',
+          '  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">',
+          '    <path d="M6 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1v-3M9 2h5m0 0v5m0-5L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+          '  </svg>',
+          '  ' + (item.link.label || 'Learn More'),
+          '</a>'
+        ].join('');
+      }
+
       /* ── PDF download button ── */
       var pdfHtml = '';
       if (item.pdf && item.pdf.href) {
@@ -308,6 +327,9 @@
 
         /* body (image is injected after paragraph 1 inside parasHtml) */
         '<div class="news-detail-body">' + parasHtml + '</div>',
+
+        /* External link button (if provided) */
+        linkHtml,
 
         /* PDF download button (if provided) */
         pdfHtml,

@@ -31,6 +31,25 @@
 const NEWS_DATA = [
 
   {
+    id:       "abstract-submission-2026",
+    title:    "Abstract Submission Now Open – 23rd INGED International ELT Conference",
+    date:     "June 2026",
+    category: "conference",
+    image:    "data/images/cfp-abstract-open.png",
+    body:     "Abstract submissions for the 23rd INGED International ELT Conference are now open! Submit your proposal for presentations, workshops, or poster sessions. Round 1 deadline: August 1, 2026.",
+    fullText: [
+      "We are delighted to announce that abstract submissions for the 23rd INGED International ELT Conference are now open. The conference will take place at Tokat Gaziosmanpaşa University on November 6–8, 2026.",
+      "We invite English language teachers, researchers, teacher educators, and graduate students to submit proposals for presentations, workshops, and poster sessions.",
+      "<strong>Round 1 Submission Deadline: August 1, 2026.</strong> Abstracts should be 200–250 words. Accepted presenters will be notified by September 1, 2026.",
+      "Click the button below to submit your abstract via our online form."
+    ],
+    link: {
+      label: "Submit Your Abstract",
+      href:  "https://forms.gle/D56J2vGxc38MEBx96"
+    }
+  },
+
+  {
     id:       "plenary-odowd-2026",
     title:    "Plenary Speaker Announcement: Prof. Robert O'Dowd",
     date:     "November 2026",
