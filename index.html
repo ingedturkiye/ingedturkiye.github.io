@@ -103,6 +103,13 @@
       </div>
       <div id="homeNewsGrid" class="grid-3"></div>
       <p id="homeNewsEmpty" style="display:none;color:var(--text-light);font-size:.92rem;">No news items yet. Check back soon.</p>
+
+      <!-- Pagination -->
+      <div id="homeNewsPager" style="display:none;align-items:center;justify-content:center;gap:16px;margin-top:32px;">
+        <button id="homeNewsPrev" onclick="homeNewsPage(-1)" class="news-pager-btn">&#8592;</button>
+        <span id="homeNewsPagerLabel" style="font-size:.82rem;font-weight:600;color:var(--text-light);min-width:60px;text-align:center;"></span>
+        <button id="homeNewsNext" onclick="homeNewsPage(1)" class="news-pager-btn">&#8594;</button>
+      </div>
     </div>
   </section>
 
@@ -313,45 +320,65 @@
       announcement: { label: "Announcement",  tag: "tag-orange", color: "#92400e" }
     };
 
+    var PER_PAGE  = 3;
+    var allItems  = typeof NEWS_DATA !== "undefined" ? NEWS_DATA : [];
+    var totalPages = Math.ceil(allItems.length / PER_PAGE);
+    var currentPage = 0;
+
     var grid  = document.getElementById("homeNewsGrid");
     var empty = document.getElementById("homeNewsEmpty");
+    var pager = document.getElementById("homeNewsPager");
+    var label = document.getElementById("homeNewsPagerLabel");
+    var prev  = document.getElementById("homeNewsPrev");
+    var next  = document.getElementById("homeNewsNext");
 
-    if (grid) {
-      var items = (typeof NEWS_DATA !== "undefined" ? NEWS_DATA : []).slice(0, 3);
+    function buildCard(item) {
+      var cat  = CAT[item.category] || { label: item.category, tag: "tag-navy", color: "var(--navy)" };
+      var href = item.id ? 'news-detail.html?id=' + item.id : '#';
+      var img  = item.image || (item.images && item.images[0]) || '';
+      var imgHtml = img
+        ? '<a href="' + href + '" style="display:block;overflow:hidden;height:180px;background:#f0f2f5;">'
+          + '<img src="' + img + '" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;"'
+          + ' onmouseover="this.style.transform=\'scale(1.04)\'" onmouseout="this.style.transform=\'scale(1)\'">'
+          + '</a>'
+        : '<div style="height:5px;background:' + cat.color + ';"></div>';
+      return '<div class="event-card">'
+        + imgHtml
+        + '<div class="event-card-top">'
+        +   '<span class="tag ' + cat.tag + '">' + cat.label + '</span>'
+        +   '<span style="font-size:.75rem;color:var(--text-light);">' + (item.date || '') + '</span>'
+        + '</div>'
+        + '<div class="event-card-body">'
+        +   '<h4>' + item.title + '</h4>'
+        +   '<p style="font-size:.86rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">' + item.body + '</p>'
+        + '</div>'
+        + '<div class="event-footer">'
+        +   '<a href="' + href + '" class="btn btn-primary btn-sm">Read More</a>'
+        + '</div>'
+        + '</div>';
+    }
 
-      if (!items.length) {
-        grid.style.display  = "none";
-        empty.style.display = "block";
-      } else {
-        grid.innerHTML = items.map(function (item, i) {
-          var cat   = CAT[item.category] || { label: item.category, tag: "tag-navy", color: "var(--navy)" };
-          var href  = item.id ? 'news-detail.html?id=' + item.id : '#';
-          var img   = item.image || (item.images && item.images[0]) || '';
-          var delay = i === 1 ? ' fade-in-d1' : i === 2 ? ' fade-in-d2' : '';
+    function renderPage(page) {
+      if (!grid) return;
+      var start = page * PER_PAGE;
+      var slice = allItems.slice(start, start + PER_PAGE);
+      grid.innerHTML = slice.map(buildCard).join('');
+      if (label) label.textContent = (page + 1) + ' / ' + totalPages;
+      if (prev)  prev.disabled  = page === 0;
+      if (next)  next.disabled  = page >= totalPages - 1;
+    }
 
-          var imgHtml = img
-            ? '<a href="' + href + '" style="display:block;overflow:hidden;height:180px;background:#f0f2f5;">'
-              + '<img src="' + img + '" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;"'
-              + ' onmouseover="this.style.transform=\'scale(1.04)\'" onmouseout="this.style.transform=\'scale(1)\'">'
-              + '</a>'
-            : '<div style="height:5px;background:' + cat.color + ';"></div>';
+    window.homeNewsPage = function (dir) {
+      currentPage = Math.max(0, Math.min(totalPages - 1, currentPage + dir));
+      renderPage(currentPage);
+    };
 
-          return '<div class="event-card fade-in' + delay + '">'
-            + imgHtml
-            + '<div class="event-card-top">'
-            +   '<span class="tag ' + cat.tag + '">' + cat.label + '</span>'
-            +   '<span style="font-size:.75rem;color:var(--text-light);">' + (item.date || '') + '</span>'
-            + '</div>'
-            + '<div class="event-card-body">'
-            +   '<h4>' + item.title + '</h4>'
-            +   '<p style="font-size:.86rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">' + item.body + '</p>'
-            + '</div>'
-            + '<div class="event-footer">'
-            +   '<a href="' + href + '" class="btn btn-primary btn-sm">Read More</a>'
-            + '</div>'
-            + '</div>';
-        }).join('');
-      }
+    if (!allItems.length) {
+      if (grid)  grid.style.display  = "none";
+      if (empty) empty.style.display = "block";
+    } else {
+      if (pager && totalPages > 1) pager.style.display = "flex";
+      renderPage(0);
     }
   })();
   </script>

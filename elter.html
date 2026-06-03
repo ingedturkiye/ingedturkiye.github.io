@@ -165,7 +165,7 @@
         <h2>ELTER News</h2>
         <span class="rule"></span>
       </div>
-      <div id="elterNewsGrid" style="display:flex;flex-direction:column;gap:14px;max-width:800px;">
+      <div id="elterNewsGrid" class="grid-3">
         <!-- Populated by JS from data/news.js (category: "elter") -->
       </div>
       <p id="elterNewsEmpty" style="display:none;color:var(--text-light);font-size:.92rem;margin-top:8px;">No ELTER news items yet. Check back soon.</p>
@@ -296,29 +296,33 @@
         return;
       }
 
-      container.innerHTML = elterNews.map(function (item) {
-        var cat        = catInfo(item.category);
-        var detailHref = item.id ? 'news-detail.html?id=' + item.id : '';
-        var readMore   = detailHref
-          ? '<a href="' + detailHref + '" style="color:var(--navy-mid);font-weight:600;font-size:.86rem;">Read more &rarr;</a>'
-          : '';
-        var cardClick  = detailHref
-          ? ' onclick="location.href=\'' + detailHref + '\'" style="cursor:pointer;"'
-          : '';
-        return [
-          '<div class="ncard fade-in"' + cardClick + '>',
-            '<div class="ncard-stripe" style="background:' + cat.stripe + ';"></div>',
-            '<div class="ncard-body">',
-              '<div style="display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap;">',
-                '<span class="tag ' + cat.tag + '">' + cat.label + '</span>',
-                '<span style="font-size:.78rem;color:var(--text-light);">' + (item.date || '') + '</span>',
-              '</div>',
-              '<h4 style="margin-bottom:7px;font-size:1.02rem;">' + item.title + '</h4>',
-              '<p style="font-size:.88rem;">' + item.body + '</p>',
-              readMore,
-            '</div>',
-          '</div>'
-        ].join('');
+      container.innerHTML = elterNews.map(function (item, i) {
+        var cat   = catInfo(item.category);
+        var href  = item.id ? 'news-detail.html?id=' + item.id : '#';
+        var img   = item.image || (item.images && item.images[0]) || '';
+        var delay = i % 3 === 1 ? ' fade-in-d1' : i % 3 === 2 ? ' fade-in-d2' : '';
+
+        var imgHtml = img
+          ? '<a href="' + href + '" style="display:block;overflow:hidden;height:180px;background:#f0f2f5;">'
+            + '<img src="' + img + '" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;"'
+            + ' onmouseover="this.style.transform=\'scale(1.04)\'" onmouseout="this.style.transform=\'scale(1)\'">'
+            + '</a>'
+          : '<div style="height:5px;background:' + cat.stripe + ';"></div>';
+
+        return '<div class="event-card fade-in' + delay + '">'
+          + imgHtml
+          + '<div class="event-card-top">'
+          +   '<span class="tag ' + cat.tag + '">' + cat.label + '</span>'
+          +   '<span style="font-size:.75rem;color:var(--text-light);">' + (item.date || '') + '</span>'
+          + '</div>'
+          + '<div class="event-card-body">'
+          +   '<h4>' + item.title + '</h4>'
+          +   '<p style="font-size:.86rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">' + item.body + '</p>'
+          + '</div>'
+          + '<div class="event-footer">'
+          +   '<a href="' + href + '" class="btn btn-primary btn-sm">Read More</a>'
+          + '</div>'
+          + '</div>';
       }).join('');
     }
 

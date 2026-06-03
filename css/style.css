@@ -900,3 +900,14 @@ input::placeholder, textarea::placeholder { color: var(--text-light); }
   display: block;
 }
 .partner-logo:hover { filter: none; opacity: 1; }
+
+/* News pagination arrows */
+.news-pager-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--border-mid); background: var(--white);
+  font-size: 1.1rem; color: var(--navy);
+  cursor: pointer; transition: background .18s, border-color .18s, color .18s;
+}
+.news-pager-btn:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+.news-pager-btn:disabled { opacity: .35; pointer-events: none; }
