@@ -1,0 +1,15 @@
+<svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg">
+  <!-- Orbit ring -->
+  <circle cx="80" cy="80" r="58" fill="none" stroke="#d0e0f0" stroke-width="4"/>
+  <!-- 5 orbital dots -->
+  <circle cx="80"  cy="22"  r="10" fill="#ffffff"/>
+  <circle cx="138" cy="51"  r="11" fill="#bcd3ee"/>
+  <circle cx="116" cy="127" r="13" fill="#7fb0e6"/>
+  <circle cx="44"  cy="127" r="14" fill="#4A90D9"/>
+  <circle cx="22"  cy="51"  r="16" fill="#F2B73D"/>
+  <!-- ELTER text -->
+  <text x="172" y="108"
+        font-family="Montserrat, Arial, sans-serif"
+        font-weight="800" font-size="80"
+        letter-spacing="4" fill="#ffffff">ELTER</text>
+</svg>

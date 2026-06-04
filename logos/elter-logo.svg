@@ -1,0 +1,13 @@
+<svg viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="200"   cy="190"  r="110"  fill="none" stroke="#d0e0f0" stroke-width="6.9"/>
+  <circle cx="200"   cy="80"   r="21.3" fill="#ffffff"/>
+  <circle cx="304.4" cy="156"  r="23.4" fill="#bcd3ee"/>
+  <circle cx="264.6" cy="279"  r="25.4" fill="#7fb0e6"/>
+  <circle cx="135.4" cy="279"  r="27.5" fill="#4A90D9"/>
+  <circle cx="95.6"  cy="156"  r="29.6" fill="#F2B73D"/>
+  <text x="200" y="410"
+        text-anchor="middle"
+        font-family="Montserrat, Arial, sans-serif"
+        font-weight="800" font-size="110"
+        letter-spacing="6" fill="#ffffff">ELTER</text>
+</svg>

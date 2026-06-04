@@ -1,0 +1,24 @@
+<svg viewBox="0 0 700 115" xmlns="http://www.w3.org/2000/svg">
+  <!-- Orbital mark — exact positions from original design -->
+  <circle cx="60" cy="60" r="38" fill="none" stroke="#d0e0f0" stroke-width="2.5"/>
+  <circle cx="60"   cy="21.6" r="7.4"  fill="#002060"/>
+  <circle cx="96.5" cy="48.1" r="8.2"  fill="#1a4fb0"/>
+  <circle cx="82.6" cy="91.1" r="8.9"  fill="#2f6fd0"/>
+  <circle cx="37.4" cy="91.1" r="9.6"  fill="#4A90D9"/>
+  <circle cx="23.5" cy="48.1" r="10.3" fill="#F2B73D"/>
+  <!-- ELTER wordmark -->
+  <text x="136" y="58"
+        font-family="Montserrat, Arial, sans-serif"
+        font-weight="800" font-size="44"
+        letter-spacing="3" fill="#002060">ELTER</text>
+  <!-- Tagline line 1 -->
+  <text x="138" y="86"
+        font-family="Montserrat, Arial, sans-serif"
+        font-weight="500" font-size="13"
+        letter-spacing="1.5" fill="#4a5568">ENGLISH LANGUAGE TEACHER</text>
+  <!-- Tagline line 2 -->
+  <text x="138" y="103"
+        font-family="Montserrat, Arial, sans-serif"
+        font-weight="500" font-size="13"
+        letter-spacing="1.5" fill="#4a5568">EDUCATION RESEARCH</text>
+</svg>
