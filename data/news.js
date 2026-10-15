@@ -102,11 +102,16 @@ const NEWS_DATA = [
     title:    "7th ELTER Colloquium at Bilkent University",
     date:     "10–11 June 2017",
     category: "elter",
+    image:    "https://static.wixstatic.com/media/2dbfa7_1622fab5895941f8abea041f662ac5a0~mv2.jpg/v1/fill/w_568,h_421,q_90,enc_avif,quality_auto/2dbfa7_1622fab5895941f8abea041f662ac5a0~mv2.jpg",
     body:     "The 7th ELTER Colloquium was held at Bilkent University, Ankara, on 10–11 June 2017.",
     fullText: [
       "The 7th ELTER Colloquium took place at Bilkent University, Ankara, on 10–11 June 2017.",
       "A summary of the event is available for download."
-    ]
+    ],
+    pdf: {
+      label: "Download Event Summary",
+      href:  "https://www.elterturkey.com/_files/ugd/2dbfa7_0e66dc4e48bf49d98c54efef5ce20b29.pdf"
+    }
   },
 
   {
@@ -114,11 +119,16 @@ const NEWS_DATA = [
     title:    "6th ELTER Colloquium at Bolu Abant İzzet Baysal University",
     date:     "10–11 June 2016",
     category: "elter",
+    image:    "https://static.wixstatic.com/media/2dbfa7_b96eb920538e4610a648d36ec30fd2ed~mv2.jpg/v1/fill/w_568,h_421,fp_0.43_0.22,q_90,enc_avif,quality_auto/2dbfa7_b96eb920538e4610a648d36ec30fd2ed~mv2.jpg",
     body:     "The 6th ELTER Colloquium was hosted by Bolu Abant İzzet Baysal University, Bolu, on 10–11 June 2016.",
     fullText: [
       "The 6th ELTER Colloquium was hosted by Bolu Abant İzzet Baysal University, Bolu, on 10–11 June 2016.",
       "A summary of the event is available for download."
-    ]
+    ],
+    pdf: {
+      label: "Download Event Summary",
+      href:  "https://www.elterturkey.com/_files/ugd/2dbfa7_56ebc7f271334cf6bcaea16d4abd1994.pdf"
+    }
   },
 
   {
@@ -126,11 +136,16 @@ const NEWS_DATA = [
     title:    "5th ELTER Colloquium at International Training Institute, Istanbul",
     date:     "5–6 June 2015",
     category: "elter",
+    image:    "https://static.wixstatic.com/media/2dbfa7_2dedfcb55bcc4c60a36591e8ca01112f~mv2.jpg/v1/fill/w_450,h_421,q_90,enc_avif,quality_auto/2dbfa7_2dedfcb55bcc4c60a36591e8ca01112f~mv2.jpg",
     body:     "The 5th ELTER Colloquium was hosted by International Training Institute in Istanbul, on 5–6 June 2015.",
     fullText: [
       "The 5th ELTER Colloquium was hosted by International Training Institute in İstanbul on 5–6 June 2015.",
-      "A summary of the event is available for download."
-    ]
+      "The programme and event summary are available for download."
+    ],
+    pdf: {
+      label: "Download Programme & Summary",
+      href:  "https://www.elterturkey.com/_files/ugd/2dbfa7_08c4e354543148a2b7e686781f6aef26.pdf"
+    }
   },
 
   {
@@ -138,6 +153,7 @@ const NEWS_DATA = [
     title:    "4th ELTER Colloquium at METU Northern Cyprus Campus",
     date:     "7–8 June 2014",
     category: "elter",
+    image:    "https://static.wixstatic.com/media/2dbfa7_8a0f587dd7684df19bb7c752f2ae6e76~mv2.jpg/v1/fill/w_568,h_421,q_90,enc_avif,quality_auto/2dbfa7_8a0f587dd7684df19bb7c752f2ae6e76~mv2.jpg",
     body:     "The 4th ELTER Colloquium was held at Middle East Technical University Northern Cyprus Campus, Cyprus, on 7–8 June 2014.",
     fullText: [
       "The 4th ELTER Colloquium took place at Middle East Technical University Northern Cyprus Campus, Cyprus, on 7–8 June 2014."
@@ -152,7 +168,10 @@ const NEWS_DATA = [
     body:     "The 3rd ELTER Colloquium was held at Izmir University of Economics, İzmir, on 21 June 2013.",
     fullText: [
       "The 3rd ELTER Colloquium took place at Izmir University of Economics, İzmir, on 21 June 2013.",
-      "The event featured a plenary talk by Prof Simon Borg and presentations on research in language teacher education."
+      "The event featured a plenary talk by Prof Simon Borg and presentations on research in language teacher education.",
+      '<a href="https://www.elterturkey.com/_files/ugd/2dbfa7_a0efd888a2a049f499c3e4161b7e1d7b.pdf" target="_blank" rel="noopener" style="color:var(--navy-mid);font-weight:600;">Programme Details →</a>',
+      '<a href="https://www.elterturkey.com/_files/ugd/2dbfa7_519a4c8a6f2c48e0ae78f9a638f0b056.pdf" target="_blank" rel="noopener" style="color:var(--navy-mid);font-weight:600;">PowerPoint Slides 2013 →</a>',
+      '<a href="https://www.elterturkey.com/_files/ugd/2dbfa7_40ca22481f69410eb09df613dbf2cb82.pdf" target="_blank" rel="noopener" style="color:var(--navy-mid);font-weight:600;">PowerPoint Slides 2012 &amp; 2013 →</a>'
     ]
   },
 
@@ -164,7 +183,12 @@ const NEWS_DATA = [
     body:     "The 2nd ELTER Colloquium was held at Boğaziçi University, Istanbul, on 22 June 2012.",
     fullText: [
       "The 2nd ELTER Colloquium took place at Boğaziçi University, Istanbul, on 22 June 2012.",
-      "Sessions covered quality in teacher education, research in teacher education, and communication among teacher educators, with a plenary talk by Prof Simon Borg."
+      "Sessions covered quality in teacher education, research in teacher education, and communication among teacher educators, with a plenary talk by Prof Simon Borg.",
+      '<a href="https://www.elterturkey.com/_files/ugd/2dbfa7_0816ede1463246d4839e1a31ec0719a9.pdf" target="_blank" rel="noopener" style="color:var(--navy-mid);font-weight:600;">Programme Details →</a>',
+      '<a href="https://www.elterturkey.com/_files/ugd/2dbfa7_8234cee13d154bb196e3716077ca8f2a.pdf" target="_blank" rel="noopener" style="color:var(--navy-mid);font-weight:600;">Quality in Teacher Education →</a>',
+      '<a href="https://www.elterturkey.com/_files/ugd/2dbfa7_822ce1cc47e6463ab5f70761e9582ad9.pdf" target="_blank" rel="noopener" style="color:var(--navy-mid);font-weight:600;">Research in Teacher Education →</a>',
+      '<a href="https://www.elterturkey.com/_files/ugd/2dbfa7_1d493c40bc414f1fb4011b291127968a.pdf" target="_blank" rel="noopener" style="color:var(--navy-mid);font-weight:600;">Communication among Teacher Educators →</a>',
+      '<a href="https://www.elterturkey.com/_files/ugd/2dbfa7_f046aca88a2f4007b5dd7e15f26936ba.pdf" target="_blank" rel="noopener" style="color:var(--navy-mid);font-weight:600;">Plenary Talk by Prof Simon Borg →</a>'
     ]
   },
 
@@ -176,7 +200,9 @@ const NEWS_DATA = [
     body:     "The inaugural ELTER Colloquium was held at Bilkent University, Ankara, on 24 June 2011.",
     fullText: [
       "The 1st ELTER Colloquium took place at Bilkent University, Ankara, on 24 June 2011 — marking the founding of the ELTER Special Interest Group.",
-      "The event featured a plenary talk by Prof Tom Farrell."
+      "The event featured a plenary talk by Prof Tom Farrell.",
+      '<a href="https://www.elterturkey.com/_files/ugd/2dbfa7_87545bb09a2148278ad9953c24265e98.pdf" target="_blank" rel="noopener" style="color:var(--navy-mid);font-weight:600;">Programme Details →</a>',
+      '<a href="https://www.elterturkey.com/_files/ugd/2dbfa7_e73d4d6c3aa94df287b59d4f9d9e1595.pdf" target="_blank" rel="noopener" style="color:var(--navy-mid);font-weight:600;">Plenary Talk by Prof Tom Farrell →</a>'
     ]
   },
 
@@ -193,7 +219,7 @@ const NEWS_DATA = [
     ],
     pdf: {
       label: "Download Programme",
-      href:  "data/pdfs/elter-2019-programme.pdf"
+      href:  "https://www.elterturkey.com/_files/ugd/2dbfa7_4e37ed107c694123bcf9b174cef59149.pdf"
     }
   }
 
