@@ -179,6 +179,11 @@
         <!-- Populated by JS from data/news.js (category: "elter") -->
       </div>
       <p id="elterNewsEmpty" style="display:none;color:var(--text-light);font-size:.92rem;margin-top:8px;">No ELTER news items yet. Check back soon.</p>
+      <div id="elterNewsPager" style="display:none;justify-content:center;align-items:center;gap:16px;margin-top:32px;">
+        <button id="elterNewsPrev" onclick="elterNewsPage(-1)" class="news-pager-btn">&#8592;</button>
+        <span id="elterNewsPagerLabel" style="font-size:.88rem;color:var(--text-light);min-width:80px;text-align:center;"></span>
+        <button id="elterNewsNext" onclick="elterNewsPage(1)" class="news-pager-btn">&#8594;</button>
+      </div>
     </div>
   </section>
 
@@ -292,49 +297,75 @@
       return CAT[key] || { label: key, tag: "tag-navy", stripe: "var(--navy)" };
     }
 
+    var PER_PAGE   = 6;
+    var elterPage  = 0;
+    var allElter   = [];
+
+    function buildCard(item, i) {
+      var cat     = catInfo(item.category);
+      var href    = item.id ? 'news-detail.html?id=' + item.id : '#';
+      var img     = item.image || (item.images && item.images[0]) || '';
+      var delay   = i % 3 === 1 ? ' fade-in-d1' : i % 3 === 2 ? ' fade-in-d2' : '';
+      var imgHtml = img
+        ? '<a href="' + href + '" style="display:block;overflow:hidden;height:180px;background:#f0f2f5;">'
+          + '<img src="' + img + '" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;"'
+          + ' onmouseover="this.style.transform=\'scale(1.04)\'" onmouseout="this.style.transform=\'scale(1)\'">'
+          + '</a>'
+        : '<div style="height:5px;background:' + cat.stripe + ';"></div>';
+      return '<div class="event-card fade-in' + delay + '">'
+        + imgHtml
+        + '<div class="event-card-top">'
+        +   '<span class="tag ' + cat.tag + '">' + cat.label + '</span>'
+        +   '<span style="font-size:.75rem;color:var(--text-light);">' + (item.date || '') + '</span>'
+        + '</div>'
+        + '<div class="event-card-body">'
+        +   '<h4>' + item.title + '</h4>'
+        +   '<p style="font-size:.86rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">' + item.body + '</p>'
+        + '</div>'
+        + '<div class="event-footer">'
+        +   '<a href="' + href + '" class="btn btn-primary btn-sm">Read More</a>'
+        + '</div>'
+        + '</div>';
+    }
+
     function renderElterNews() {
       var container = document.getElementById("elterNewsGrid");
       var empty     = document.getElementById("elterNewsEmpty");
+      var pager     = document.getElementById("elterNewsPager");
+      var label     = document.getElementById("elterNewsPagerLabel");
       if (!container) return;
 
-      var data      = typeof NEWS_DATA !== "undefined" ? NEWS_DATA : [];
-      var elterNews = data.filter(function (item) { return item.category === "elter"; });
+      var data = typeof NEWS_DATA !== "undefined" ? NEWS_DATA : [];
+      allElter = data.filter(function (item) { return item.category === "elter"; });
 
-      if (elterNews.length === 0) {
+      if (allElter.length === 0) {
         container.style.display = "none";
         empty.style.display     = "block";
         return;
       }
 
-      container.innerHTML = elterNews.map(function (item, i) {
-        var cat   = catInfo(item.category);
-        var href  = item.id ? 'news-detail.html?id=' + item.id : '#';
-        var img   = item.image || (item.images && item.images[0]) || '';
-        var delay = i % 3 === 1 ? ' fade-in-d1' : i % 3 === 2 ? ' fade-in-d2' : '';
+      var totalPages = Math.ceil(allElter.length / PER_PAGE);
+      var start      = elterPage * PER_PAGE;
+      var pageItems  = allElter.slice(start, start + PER_PAGE);
 
-        var imgHtml = img
-          ? '<a href="' + href + '" style="display:block;overflow:hidden;height:180px;background:#f0f2f5;">'
-            + '<img src="' + img + '" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;"'
-            + ' onmouseover="this.style.transform=\'scale(1.04)\'" onmouseout="this.style.transform=\'scale(1)\'">'
-            + '</a>'
-          : '<div style="height:5px;background:' + cat.stripe + ';"></div>';
+      container.innerHTML = pageItems.map(buildCard).join('');
 
-        return '<div class="event-card fade-in' + delay + '">'
-          + imgHtml
-          + '<div class="event-card-top">'
-          +   '<span class="tag ' + cat.tag + '">' + cat.label + '</span>'
-          +   '<span style="font-size:.75rem;color:var(--text-light);">' + (item.date || '') + '</span>'
-          + '</div>'
-          + '<div class="event-card-body">'
-          +   '<h4>' + item.title + '</h4>'
-          +   '<p style="font-size:.86rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">' + item.body + '</p>'
-          + '</div>'
-          + '<div class="event-footer">'
-          +   '<a href="' + href + '" class="btn btn-primary btn-sm">Read More</a>'
-          + '</div>'
-          + '</div>';
-      }).join('');
+      if (totalPages > 1) {
+        pager.style.display = "flex";
+        label.textContent   = (elterPage + 1) + " / " + totalPages;
+        document.getElementById("elterNewsPrev").disabled = elterPage === 0;
+        document.getElementById("elterNewsNext").disabled = elterPage === totalPages - 1;
+      } else {
+        pager.style.display = "none";
+      }
     }
+
+    window.elterNewsPage = function (dir) {
+      var totalPages = Math.ceil(allElter.length / PER_PAGE);
+      elterPage = Math.max(0, Math.min(totalPages - 1, elterPage + dir));
+      renderElterNews();
+      document.getElementById("elterNewsGrid").scrollIntoView({ behavior: "smooth", block: "start" });
+    };
 
     renderElterNews();
 
