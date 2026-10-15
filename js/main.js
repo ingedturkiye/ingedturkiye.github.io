@@ -153,8 +153,8 @@ const FOOTER_HTML = `
   <div class="footer-bottom">
     <span>© 2026 INGED — İngilizce Eğitimi Derneği. All rights reserved.</span>
     <div class="footer-bottom-links">
-      <a href="#" class="fbl">Privacy Policy</a>
-      <a href="#" class="fbl">Sitemap</a>
+      <a href="privacy-policy.html" class="fbl">Privacy Policy</a>
+      <a href="sitemap.html" class="fbl">Sitemap</a>
     </div>
   </div>
 </footer>
