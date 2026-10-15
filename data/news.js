@@ -102,7 +102,7 @@ const NEWS_DATA = [
     title:    "7th ELTER Colloquium at Bilkent University",
     date:     "10–11 June 2017",
     category: "elter",
-    image:    "https://static.wixstatic.com/media/2dbfa7_1622fab5895941f8abea041f662ac5a0~mv2.jpg/v1/fill/w_568,h_421,q_90,enc_avif,quality_auto/2dbfa7_1622fab5895941f8abea041f662ac5a0~mv2.jpg",
+    image:    "data/images/elter-2017.jpg",
     body:     "The 7th ELTER Colloquium was held at Bilkent University, Ankara, on 10–11 June 2017.",
     fullText: [
       "The 7th ELTER Colloquium took place at Bilkent University, Ankara, on 10–11 June 2017.",
@@ -119,7 +119,7 @@ const NEWS_DATA = [
     title:    "6th ELTER Colloquium at Bolu Abant İzzet Baysal University",
     date:     "10–11 June 2016",
     category: "elter",
-    image:    "https://static.wixstatic.com/media/2dbfa7_b96eb920538e4610a648d36ec30fd2ed~mv2.jpg/v1/fill/w_568,h_421,fp_0.43_0.22,q_90,enc_avif,quality_auto/2dbfa7_b96eb920538e4610a648d36ec30fd2ed~mv2.jpg",
+    image:    "data/images/elter-2016.jpg",
     body:     "The 6th ELTER Colloquium was hosted by Bolu Abant İzzet Baysal University, Bolu, on 10–11 June 2016.",
     fullText: [
       "The 6th ELTER Colloquium was hosted by Bolu Abant İzzet Baysal University, Bolu, on 10–11 June 2016.",
@@ -136,7 +136,7 @@ const NEWS_DATA = [
     title:    "5th ELTER Colloquium at International Training Institute, Istanbul",
     date:     "5–6 June 2015",
     category: "elter",
-    image:    "https://static.wixstatic.com/media/2dbfa7_2dedfcb55bcc4c60a36591e8ca01112f~mv2.jpg/v1/fill/w_450,h_421,q_90,enc_avif,quality_auto/2dbfa7_2dedfcb55bcc4c60a36591e8ca01112f~mv2.jpg",
+    image:    "data/images/elter-2015.jpg",
     body:     "The 5th ELTER Colloquium was hosted by International Training Institute in Istanbul, on 5–6 June 2015.",
     fullText: [
       "The 5th ELTER Colloquium was hosted by International Training Institute in İstanbul on 5–6 June 2015.",
@@ -153,7 +153,7 @@ const NEWS_DATA = [
     title:    "4th ELTER Colloquium at METU Northern Cyprus Campus",
     date:     "7–8 June 2014",
     category: "elter",
-    image:    "https://static.wixstatic.com/media/2dbfa7_8a0f587dd7684df19bb7c752f2ae6e76~mv2.jpg/v1/fill/w_568,h_421,q_90,enc_avif,quality_auto/2dbfa7_8a0f587dd7684df19bb7c752f2ae6e76~mv2.jpg",
+    image:    "data/images/elter-2014.jpg",
     body:     "The 4th ELTER Colloquium was held at Middle East Technical University Northern Cyprus Campus, Cyprus, on 7–8 June 2014.",
     fullText: [
       "The 4th ELTER Colloquium took place at Middle East Technical University Northern Cyprus Campus, Cyprus, on 7–8 June 2014."
