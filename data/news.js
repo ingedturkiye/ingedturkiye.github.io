@@ -98,6 +98,89 @@ const NEWS_DATA = [
   },
 
   {
+    id:       "elter-2017",
+    title:    "7th ELTER Colloquium at Bilkent University",
+    date:     "10–11 June 2017",
+    category: "elter",
+    body:     "The 7th ELTER Colloquium was held at Bilkent University, Ankara, on 10–11 June 2017.",
+    fullText: [
+      "The 7th ELTER Colloquium took place at Bilkent University, Ankara, on 10–11 June 2017.",
+      "A summary of the event is available for download."
+    ]
+  },
+
+  {
+    id:       "elter-2016",
+    title:    "6th ELTER Colloquium at Bolu Abant İzzet Baysal University",
+    date:     "10–11 June 2016",
+    category: "elter",
+    body:     "The 6th ELTER Colloquium was hosted by Bolu Abant İzzet Baysal University, Bolu, on 10–11 June 2016.",
+    fullText: [
+      "The 6th ELTER Colloquium was hosted by Bolu Abant İzzet Baysal University, Bolu, on 10–11 June 2016.",
+      "A summary of the event is available for download."
+    ]
+  },
+
+  {
+    id:       "elter-2015",
+    title:    "5th ELTER Colloquium at International Training Institute, Istanbul",
+    date:     "5–6 June 2015",
+    category: "elter",
+    body:     "The 5th ELTER Colloquium was hosted by International Training Institute in Istanbul, on 5–6 June 2015.",
+    fullText: [
+      "The 5th ELTER Colloquium was hosted by International Training Institute in İstanbul on 5–6 June 2015.",
+      "A summary of the event is available for download."
+    ]
+  },
+
+  {
+    id:       "elter-2014",
+    title:    "4th ELTER Colloquium at METU Northern Cyprus Campus",
+    date:     "7–8 June 2014",
+    category: "elter",
+    body:     "The 4th ELTER Colloquium was held at Middle East Technical University Northern Cyprus Campus, Cyprus, on 7–8 June 2014.",
+    fullText: [
+      "The 4th ELTER Colloquium took place at Middle East Technical University Northern Cyprus Campus, Cyprus, on 7–8 June 2014."
+    ]
+  },
+
+  {
+    id:       "elter-2013",
+    title:    "3rd ELTER Colloquium at Izmir University of Economics",
+    date:     "21 June 2013",
+    category: "elter",
+    body:     "The 3rd ELTER Colloquium was held at Izmir University of Economics, İzmir, on 21 June 2013.",
+    fullText: [
+      "The 3rd ELTER Colloquium took place at Izmir University of Economics, İzmir, on 21 June 2013.",
+      "The event featured a plenary talk by Prof Simon Borg and presentations on research in language teacher education."
+    ]
+  },
+
+  {
+    id:       "elter-2012",
+    title:    "2nd ELTER Colloquium at Boğaziçi University, Istanbul",
+    date:     "22 June 2012",
+    category: "elter",
+    body:     "The 2nd ELTER Colloquium was held at Boğaziçi University, Istanbul, on 22 June 2012.",
+    fullText: [
+      "The 2nd ELTER Colloquium took place at Boğaziçi University, Istanbul, on 22 June 2012.",
+      "Sessions covered quality in teacher education, research in teacher education, and communication among teacher educators, with a plenary talk by Prof Simon Borg."
+    ]
+  },
+
+  {
+    id:       "elter-2011",
+    title:    "1st ELTER Colloquium at Bilkent University, Ankara",
+    date:     "24 June 2011",
+    category: "elter",
+    body:     "The inaugural ELTER Colloquium was held at Bilkent University, Ankara, on 24 June 2011.",
+    fullText: [
+      "The 1st ELTER Colloquium took place at Bilkent University, Ankara, on 24 June 2011 — marking the founding of the ELTER Special Interest Group.",
+      "The event featured a plenary talk by Prof Tom Farrell."
+    ]
+  },
+
+  {
     id:       "elter-2019",
     title:    "8th ELTER Colloquium at Gazi University",
     date:     "22 June 2019",
