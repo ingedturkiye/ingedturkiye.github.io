@@ -50,6 +50,21 @@ const NEWS_DATA = [
   },
 
   {
+    id:       "plenary-ersoz-2026",
+    title:    "Plenary Speaker: Prof. Dr. Aydan Ersöz",
+    date:     "October 2026",
+    category: "conference",
+    image:    "data/images/aydan-ersoz.jpeg",
+    body:     "We are honoured to welcome Prof. Dr. Aydan Ersöz, Emeritus Professor at Gazi University and Honorary Chair of INGED, as a plenary speaker at the 23rd INGED International ELT Conference.",
+    fullText: [
+      "We are honoured to welcome <strong>Prof. Dr. Aydan Ersöz</strong> as a plenary speaker at the 23rd INGED International ELT Conference (Tokat Gaziosmanpaşa University, November 6–8, 2026).",
+      "Prof. Dr. Ersöz is Emeritus Professor at the Faculty of Education, Gazi University, Ankara, and Honorary Chair of INGED — İngilizce Eğitimi Derneği. She holds a BA in Linguistics from Hacettepe University and an MA and PhD in English Language Teaching from Gazi University, with doctoral research conducted at the University of Iowa (1988–1989).",
+      "Over a career spanning more than three decades, Prof. Dr. Ersöz has made lasting contributions to English language teacher education in Turkey. Her research and teaching interests include teaching English to young learners, materials evaluation and development, and in-service teacher training. She served as a trainer in numerous Ministry of Education programmes and has delivered keynote addresses at national and international ELT conferences.",
+      "She served as President of INGED and has been a central figure in shaping the association's professional development mission since its founding. Her dedication to the ELT community in Turkey continues to inspire generations of English language teachers and teacher educators."
+    ]
+  },
+
+  {
     id:       "plenary-odowd-2026",
     title:    "Plenary Speaker (Online): Prof. Robert O'Dowd",
     date:     "October 2026",
