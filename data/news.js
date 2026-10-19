@@ -51,21 +51,54 @@ const NEWS_DATA = [
 
   {
     id:       "plenary-odowd-2026",
-    title:    "Plenary Speaker Announcement: Prof. Robert O'Dowd",
-    date:     "November 2026",
+    title:    "Plenary Speaker (Online): Prof. Robert O'Dowd",
+    date:     "October 2026",
     category: "conference",
     image:    "data/images/robert-o-dowd.jpeg",
-    body:     "We are delighted to announce Professor Robert O'Dowd (Universidad de León, Spain) as a plenary speaker at the 23rd INGED International ELT Conference. His talk is titled \"Virtual Exchange at a Crossroads: Navigating Pedagogical and Ethical Challenges in Foreign Language Education.\"",
+    body:     "We are delighted to announce Professor Robert O'Dowd (Universidad de León, Spain) as an online plenary speaker at the 23rd INGED International ELT Conference. His talk is titled \"Virtual Exchange at a Crossroads: Navigating Pedagogical and Ethical Challenges in Foreign Language Education.\"",
     fullText: [
-      "We are delighted to announce Professor Robert O'Dowd from the Universidad de León, Spain, as a plenary speaker at the 23rd INGED International ELT Conference (Tokat Gaziosmanpaşa University, November 6–8, 2026).",
+      "We are delighted to announce <strong>Professor Robert O'Dowd</strong> from the Universidad de León, Spain, as an online plenary speaker at the 23rd INGED International ELT Conference (Tokat Gaziosmanpaşa University, November 6–8, 2026).",
       "<strong>Talk Title:</strong> Virtual Exchange at a Crossroads: Navigating Pedagogical and Ethical Challenges in Foreign Language Education",
-      "Virtual Exchange (VE) refers to the numerous online learning initiatives and methodologies which bring learners in online collaborative projects together with partners from different cultural backgrounds as part of their study programmes and under the guidance of teachers or trained facilitators. Its potential for giving learners authentic experiences of intercultural communication has made it a common practice in foreign language classrooms. However, VE in foreign language education has evolved significantly in recent years from its early focus on bilingual North-North partnerships to encompass diverse global collaborations, including North-South exchanges and partnerships with conflict zones.",
+      "Virtual Exchange (VE) refers to the numerous online learning initiatives and methodologies which bring learners in online collaborative projects together with partners from different cultural backgrounds as part of their study programmes and under the guidance of teachers or trained facilitators. Its potential for giving learners authentic experiences of intercultural communication has made it a common practice in foreign language classrooms.",
       "While VE has gained increased recognition as a valuable tool for internationalisation, particularly following COVID-19, this expansion has generated complex pedagogical and ethical challenges that practitioners must navigate. In this presentation Prof. O'Dowd will examine six critical areas of concern: structural inequalities in project design that risk reproducing Global North hegemony; communication barriers in lingua franca contexts that advantage privileged learners; the psychological risks of engaging students with conflict zone partners; political and institutional pressures surrounding controversial partnerships; questions about VE's capacity for genuine social impact versus tokenistic engagement; and maintaining motivation among increasingly internationally-experienced student populations.",
-      "Drawing on recent literature and over two decades of practice, he argues that VE's transition from niche activity to mainstream educational tool demands more sophisticated approaches that address power imbalances, provide robust linguistic scaffolding, implement trauma-informed protocols, and move beyond superficial intercultural encounters. The talk will conclude with recommendations for developing more equitable, effective, and engaging VE programmes that can navigate the tensions between educational aspirations and global realities.",
       "<strong>About the Speaker</strong>",
       "Robert O'Dowd is Full Professor for English Studies at the Universidad de León, Spain. A native of Ireland, he has taught at universities in Ireland, Germany, and Spain. He has published extensively on the application of Virtual Exchange and Blended Mobility in higher education and has been invited to deliver plenary speeches at international conferences in the US, Asia, and across Europe.",
       "As coordinator of three Erasmus+ projects, including the European Policy Experiment 'Virtual Innovation and Support Networks for Teachers' (VALIANT), he has regularly collaborated with universities and organizations on the promotion and integration of Virtual Exchange in higher education. His most recent books are <em>Internationalising Higher Education and the Role of Virtual Exchange</em> (2023, Routledge) and the co-edited volume <em>Virtual Innovation and Support Networks</em> (2024, Peter Lang).",
-      "He has been recognized in Stanford University's 'Ranking of the World Scientists: World's Top 2% Scientists' from 2023 to 2025. He also works regularly as an expert evaluator for the European Commission and is a consultant in the field of Language Education Policy and Practice for the Council of Europe."
+      "He has been recognized in Stanford University's 'Ranking of the World Scientists: World's Top 2% Scientists' from 2023 to 2025.",
+      "<em>Prof. O'Dowd will deliver his plenary session online.</em>"
+    ]
+  },
+
+  {
+    id:       "plenary-warren-2026",
+    title:    "Plenary Speaker: Dr. Amber N. Warren",
+    date:     "October 2026",
+    category: "conference",
+    image:    "data/images/amber-warren.jpeg",
+    body:     "We are pleased to announce Dr. Amber N. Warren (Vanderbilt University, USA) as a plenary speaker at the 23rd INGED International ELT Conference, November 6–8, 2026 in Tokat.",
+    fullText: [
+      "We are delighted to announce <strong>Dr. Amber N. Warren</strong> from Vanderbilt University's Peabody College of Education and Human Development, USA, as a plenary speaker at the 23rd INGED International ELT Conference.",
+      "<strong>About the Speaker</strong>",
+      "Amber N. Warren, PhD, is Associate Professor of the Practice in Multilingual Learner Education at Vanderbilt University's Peabody College of Education and Human Development. She holds a PhD from Indiana University (2016) and prior to joining Vanderbilt served as Assistant Professor of Educational Studies (Language Education) at the University of Nevada, Reno.",
+      "Dr. Warren's research centres on language teacher identity, equity, and the intersections of policy and pedagogy in TESOL and multilingual education contexts. Using qualitative methodologies, she examines how teachers — especially those working with multilingual learners — make sense of their professional identities under the pressures of education policy, institutional expectations, and social positionality.",
+      "Her work has appeared in leading journals including the <em>TESOL Journal</em>, <em>Teaching and Teacher Education</em>, and the <em>Journal of Education Policy</em>. She is a recognised leader in the TESOL professional community and a co-editor of multiple volumes in language teacher education."
+    ]
+  },
+
+  {
+    id:       "plenary-colpaert-2026",
+    title:    "Plenary Speaker (Online): Prof. Jozef Colpaert",
+    date:     "October 2026",
+    category: "conference",
+    image:    "data/images/jozef-colpaert.jpeg",
+    body:     "We are pleased to announce Prof. Jozef Colpaert (University of Antwerp / Ontario Tech University) as an online plenary speaker at the 23rd INGED International ELT Conference, November 6–8, 2026 in Tokat.",
+    fullText: [
+      "We are delighted to announce <strong>Prof. Jozef Colpaert</strong> from the University of Antwerp, Belgium, as an online plenary speaker at the 23rd INGED International ELT Conference.",
+      "<strong>About the Speaker</strong>",
+      "Jozef Colpaert is Emeritus Professor of Instructional Design, Educational Technology, and Computer Assisted Language Learning (CALL) at the University of Antwerp, Belgium. He also holds an adjunct professorship at Ontario Tech University (2024–2027). He co-founded LatinCALL, served as President of EuroCALL, and organised the International CALL Research Conferences (2002–2022).",
+      "Professor Colpaert served for two decades as Editor-in-Chief of the journal <em>Computer Assisted Language Learning</em> (Taylor &amp; Francis; Impact Factor: 7.0) and currently serves as editor of the new journal <em>Language and Motivation</em> (launched 2024). His 2025 chapter appears in the <em>Cambridge Handbook of Technology in Language Teaching and Learning</em>.",
+      "His research is grounded in ecological and motivational design frameworks for language learning environments, interrogating multimodal learning, natural language decoding, and the motivational underpinnings of task design. A sought-after plenary speaker at WorldCALL, CALICO, and LET-IN, he is widely regarded as one of the field's most incisive voices on the epistemological foundations of CALL research.",
+      "<em>Prof. Colpaert will deliver his plenary session online.</em>"
     ]
   },
 

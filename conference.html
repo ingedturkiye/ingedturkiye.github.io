@@ -55,8 +55,31 @@
     </div>
   </section>
 
+  <!-- STICKY SECTION NAV -->
+  <nav id="confSectionNav" style="position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.06);">
+    <div class="container" style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <ul style="display:flex;gap:0;list-style:none;margin:0;padding:0;white-space:nowrap;">
+        <li><a href="#conf-about"      class="conf-nav-link">About</a></li>
+        <li><a href="#conf-plenaries"  class="conf-nav-link">Plenary Speakers</a></li>
+        <li><a href="#conf-dates"      class="conf-nav-link">Key Dates</a></li>
+        <li><a href="#conf-accomm"     class="conf-nav-link">Accommodation</a></li>
+        <li><a href="#conf-committees" class="conf-nav-link">Committees</a></li>
+        <li><a href="#conf-history"    class="conf-nav-link">Previous Conferences</a></li>
+        <li><a href="#conf-news"       class="conf-nav-link">News</a></li>
+      </ul>
+    </div>
+  </nav>
+  <style>
+    .conf-nav-link {
+      display:inline-block;padding:14px 18px;font-family:'Montserrat',sans-serif;font-weight:600;
+      font-size:.78rem;letter-spacing:.4px;color:var(--text-mid);text-decoration:none;
+      border-bottom:3px solid transparent;transition:color .2s,border-color .2s;
+    }
+    .conf-nav-link:hover,.conf-nav-link.active { color:var(--navy);border-bottom-color:var(--navy); }
+  </style>
+
   <!-- ABOUT + SUBMIT -->
-  <section class="section">
+  <section id="conf-about" class="section">
     <div class="container">
       <div class="grid-2" style="gap:48px;align-items:start;">
         <div class="fade-in">
@@ -73,7 +96,7 @@
           </div>
         </div>
 
-        <div class="fade-in fade-in-d1">
+        <div id="conf-dates" class="fade-in fade-in-d1">
           <div class="sec-hd">
             <span class="kicker">Key Dates</span>
             <h2>Important Dates</h2>
@@ -203,8 +226,81 @@
     </div>
   </section>
 
+  <!-- PLENARY SPEAKERS -->
+  <section id="conf-plenaries" class="section">
+    <div class="container">
+      <div class="sec-hd fade-in" style="text-align:center;">
+        <span class="kicker">Keynotes</span>
+        <h2>Plenary Speakers</h2>
+        <span class="rule" style="margin:0 auto;"></span>
+      </div>
+      <div class="grid-3 fade-in" style="gap:32px;margin-top:40px;">
+
+        <!-- Amber Warren -->
+        <div style="background:var(--bg-card);border-radius:var(--radius);box-shadow:0 4px 24px rgba(0,20,60,.09);overflow:hidden;">
+          <div style="background:linear-gradient(135deg,var(--navy) 0%,#1a3a70 100%);padding:36px 32px 0;display:flex;flex-direction:column;align-items:center;">
+            <div style="width:130px;height:130px;border-radius:50%;overflow:hidden;border:4px solid rgba(255,255,255,.25);box-shadow:0 8px 24px rgba(0,0,0,.25);flex-shrink:0;">
+              <img src="data/images/amber-warren.jpeg" alt="Dr. Amber N. Warren" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="text-align:center;padding:20px 0 24px;">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.15rem;color:white;">Dr. Amber N. Warren</div>
+              <div style="font-size:.82rem;color:rgba(255,255,255,.75);margin-top:4px;">Vanderbilt University, USA</div>
+            </div>
+          </div>
+          <div style="padding:24px 28px;">
+            <p style="font-size:.88rem;line-height:1.7;color:var(--text-mid);">Associate Professor of the Practice in Multilingual Learner Education at Vanderbilt University's Peabody College. Her research centres on language teacher identity, equity, and the intersections of policy and pedagogy in TESOL contexts. She has published in <em>TESOL Journal</em>, <em>Teaching and Teacher Education</em>, and is a co-editor of multiple volumes in language teacher education.</p>
+            <a href="news-detail.html?id=plenary-warren-2026" class="btn btn-primary btn-sm" style="margin-top:12px;">Full Bio &amp; Abstract</a>
+          </div>
+        </div>
+
+        <!-- Jozef Colpaert -->
+        <div style="background:var(--bg-card);border-radius:var(--radius);box-shadow:0 4px 24px rgba(0,20,60,.09);overflow:hidden;">
+          <div style="background:linear-gradient(135deg,#1a3a70 0%,#2a5298 100%);padding:36px 32px 0;display:flex;flex-direction:column;align-items:center;">
+            <div style="width:130px;height:130px;border-radius:50%;overflow:hidden;border:4px solid rgba(255,255,255,.25);box-shadow:0 8px 24px rgba(0,0,0,.25);flex-shrink:0;">
+              <img src="data/images/jozef-colpaert.jpeg" alt="Prof. Jozef Colpaert" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="text-align:center;padding:20px 0 24px;">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.15rem;color:white;">Prof. Jozef Colpaert</div>
+              <div style="font-size:.82rem;color:rgba(255,255,255,.75);margin-top:4px;">University of Antwerp, Belgium</div>
+              <div style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:4px 12px;background:rgba(255,255,255,.15);border-radius:20px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span style="font-size:.75rem;color:white;font-weight:600;">Presenting Online</span>
+              </div>
+            </div>
+          </div>
+          <div style="padding:24px 28px;">
+            <p style="font-size:.88rem;line-height:1.7;color:var(--text-mid);">Emeritus Professor of Instructional Design and CALL at the University of Antwerp and adjunct professor at Ontario Tech University. Former Editor-in-Chief of <em>Computer Assisted Language Learning</em> (IF 7.0) and current editor of <em>Language and Motivation</em>. Co-founder of LatinCALL and former President of EuroCALL; a leading voice in the epistemological foundations of CALL research.</p>
+            <a href="news-detail.html?id=plenary-colpaert-2026" class="btn btn-primary btn-sm" style="margin-top:12px;">Full Bio &amp; Abstract</a>
+          </div>
+        </div>
+
+        <!-- Robert O'Dowd -->
+        <div style="background:var(--bg-card);border-radius:var(--radius);box-shadow:0 4px 24px rgba(0,20,60,.09);overflow:hidden;">
+          <div style="background:linear-gradient(135deg,#0d2b5e 0%,#1a3a70 100%);padding:36px 32px 0;display:flex;flex-direction:column;align-items:center;">
+            <div style="width:130px;height:130px;border-radius:50%;overflow:hidden;border:4px solid rgba(255,255,255,.25);box-shadow:0 8px 24px rgba(0,0,0,.25);flex-shrink:0;">
+              <img src="data/images/robert-o-dowd.jpeg" alt="Prof. Robert O'Dowd" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="text-align:center;padding:20px 0 24px;">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.15rem;color:white;">Prof. Robert O'Dowd</div>
+              <div style="font-size:.82rem;color:rgba(255,255,255,.75);margin-top:4px;">Universidad de León, Spain</div>
+              <div style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:4px 12px;background:rgba(255,255,255,.15);border-radius:20px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span style="font-size:.75rem;color:white;font-weight:600;">Presenting Online</span>
+              </div>
+            </div>
+          </div>
+          <div style="padding:24px 28px;">
+            <p style="font-size:.88rem;line-height:1.7;color:var(--text-mid);">Full Professor for English Studies at the Universidad de León, Spain. He has published extensively on Virtual Exchange and Blended Mobility in higher education, coordinated three Erasmus+ projects, and is recognized in Stanford University's World's Top 2% Scientists (2023–2025). His talk is titled <em>"Virtual Exchange at a Crossroads."</em></p>
+            <a href="news-detail.html?id=plenary-odowd-2026" class="btn btn-primary btn-sm" style="margin-top:12px;">Full Bio &amp; Abstract</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ACCOMMODATION -->
-  <section class="section-sm section-subtle">
+  <section id="conf-accomm" class="section-sm section-subtle">
     <div class="container">
       <div class="sec-hd fade-in">
         <span class="kicker">Where to Stay</span>
@@ -305,7 +401,7 @@
   </section>
 
   <!-- SCIENTIFIC & ORGANIZING COMMITTEES -->
-  <section class="section">
+  <section id="conf-committees" class="section">
     <div class="container">
       <div class="grid-2" style="gap:48px;align-items:start;">
 
@@ -370,7 +466,7 @@
   </section>
 
   <!-- PREVIOUS CONFERENCE POSTERS -->
-  <section class="section">
+  <section id="conf-history" class="section">
     <div class="container">
       <div class="sec-hd fade-in">
         <span class="kicker">History</span>
@@ -470,7 +566,7 @@
   </div>
 
   <!-- CONFERENCE NEWS (from data/news.js, category: "conference") -->
-  <section class="section">
+  <section id="conf-news" class="section">
     <div class="container">
       <div class="sec-hd fade-in">
         <span class="kicker">Latest</span>
@@ -549,6 +645,27 @@
     }
 
     renderConfNews();
+  })();
+  </script>
+
+  <script>
+  (function () {
+    var links    = document.querySelectorAll('.conf-nav-link');
+    var sections = ['conf-about','conf-plenaries','conf-dates','conf-accomm','conf-committees','conf-history','conf-news'];
+    function onScroll() {
+      var scrollY = window.scrollY + 80;
+      var current = sections[0];
+      sections.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollY) current = id;
+      });
+      links.forEach(function (a) {
+        var href = a.getAttribute('href').replace('#','');
+        a.classList.toggle('active', href === current);
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   })();
   </script>
 </body>
