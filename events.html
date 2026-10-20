@@ -110,7 +110,7 @@
       grid.innerHTML = data.map(function (ev) {
         var cat  = catInfo(ev.category);
         var imgH = ev.image
-          ? '<div class="event-card-img" style="background-image:url(\'' + ev.image + '\');"></div>'
+          ? '<div class="event-card-img" style="background-image:url(\'' + ev.image + '\');background-position:' + (ev.bgPosition || 'center') + ';"></div>'
           : '';
         var btns = (ev.links || []).map(function (l, i) {
           var cls    = l.style === "secondary" ? "btn btn-secondary btn-sm" : "btn btn-primary btn-sm";

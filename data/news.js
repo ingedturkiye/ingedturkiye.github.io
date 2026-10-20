@@ -55,6 +55,7 @@ const NEWS_DATA = [
     date:     "October 2026",
     category: "conference",
     image:    "data/images/aydan-ersoz.jpeg",
+    bgPosition: "top",
     body:     "We are honoured to welcome Prof. Dr. Aydan Ersöz, Emeritus Professor at Gazi University and Honorary Chair of INGED, as a plenary speaker at the 23rd INGED International ELT Conference.",
     fullText: [
       "We are honoured to welcome <strong>Prof. Dr. Aydan Ersöz</strong> as a plenary speaker at the 23rd INGED International ELT Conference (Tokat Gaziosmanpaşa University, November 6–8, 2026).",
