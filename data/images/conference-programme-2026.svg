@@ -46,7 +46,7 @@
 
   <!-- Main title -->
   <text x="48" y="178" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Conference</text>
-  <text x="48" y="238" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Programme</text>
+  <text x="48" y="238" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Program</text>
 
   <!-- Gold underline -->
   <rect x="48" y="258" width="340" height="3" fill="url(#gold)" rx="2" opacity="0.8"/>

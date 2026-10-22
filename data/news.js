@@ -35,7 +35,7 @@ const NEWS_DATA = [
     title:    "Conference Program Now Available – 23rd INGED ELT Conference",
     date:     "October 2026",
     category: "conference",
-    image:    "data/images/conference-programme-2026.svg",
+    image:    "data/images/conference-program-cover.jpg",
     body:     "The session program for the 23rd INGED International ELT Conference is now available for download. Venue and room assignments will be announced shortly.",
     fullText: [
       "We are pleased to share the session program for the <strong>23rd INGED International ELT Conference</strong> (Tokat Gaziosmanpaşa University, November 6–8, 2026).",
