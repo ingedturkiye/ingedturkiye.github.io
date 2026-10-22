@@ -32,19 +32,19 @@ const NEWS_DATA = [
 
   {
     id:       "conference-program-2026",
-    title:    "Conference Programme Now Available – 23rd INGED ELT Conference",
+    title:    "Conference Program Now Available – 23rd INGED ELT Conference",
     date:     "October 2026",
     category: "conference",
     image:    "data/images/conference-programme-2026.svg",
-    body:     "The session programme for the 23rd INGED International ELT Conference is now available for download. Venue and room assignments will be announced shortly.",
+    body:     "The session program for the 23rd INGED International ELT Conference is now available for download. Venue and room assignments will be announced shortly.",
     fullText: [
-      "We are pleased to share the session programme for the <strong>23rd INGED International ELT Conference</strong> (Tokat Gaziosmanpaşa University, November 6–8, 2026).",
-      "The programme provides an overview of all accepted presentations, workshops, and poster sessions scheduled across the conference days.",
-      "<strong>Please note:</strong> Venue and room assignments will be added to the programme in the coming days. We will share the updated version as soon as room allocations are finalised.",
-      "Download the current programme using the button below."
+      "We are pleased to share the session program for the <strong>23rd INGED International ELT Conference</strong> (Tokat Gaziosmanpaşa University, November 6–8, 2026).",
+      "The program provides an overview of all accepted presentations, workshops, and poster sessions scheduled across the conference days.",
+      "<strong>Please note:</strong> Venue and room assignments will be added to the program in the coming days. We will share the updated version as soon as room allocations are finalised.",
+      "Download the current program using the button below."
     ],
     pdf: {
-      label: "Download Programme Matrix",
+      label: "Download Program",
       href:  "data/pdfs/conference-program-matrix-2026.pdf"
     }
   },
