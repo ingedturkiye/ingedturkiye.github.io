@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1e4a"/>
+      <stop offset="100%" stop-color="#1a3a70"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c9a227"/>
+      <stop offset="100%" stop-color="#e8c84a"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e4080" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1e4080" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.06" stroke="white" stroke-width="1">
+    <line x1="0" y1="120" x2="800" y2="120"/>
+    <line x1="0" y1="240" x2="800" y2="240"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="480"/>
+    <line x1="320" y1="0" x2="320" y2="480"/>
+    <line x1="480" y1="0" x2="480" y2="480"/>
+    <line x1="640" y1="0" x2="640" y2="480"/>
+  </g>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="6" height="480" fill="url(#gold)"/>
+
+  <!-- Top right decorative circle -->
+  <circle cx="720" cy="60" r="120" fill="none" stroke="white" stroke-width="1" opacity="0.08"/>
+  <circle cx="720" cy="60" r="80" fill="none" stroke="white" stroke-width="1" opacity="0.06"/>
+
+  <!-- Bottom fade overlay -->
+  <rect width="800" height="480" fill="url(#fade)"/>
+
+  <!-- Gold rule top -->
+  <rect x="48" y="48" width="200" height="3" fill="url(#gold)" rx="2"/>
+
+  <!-- INGED label -->
+  <text x="48" y="94" font-family="Georgia, serif" font-size="13" font-weight="normal" fill="#e8c84a" letter-spacing="5">INGED · 2026</text>
+
+  <!-- Main title -->
+  <text x="48" y="178" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Conference</text>
+  <text x="48" y="238" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Programme</text>
+
+  <!-- Gold underline -->
+  <rect x="48" y="258" width="340" height="3" fill="url(#gold)" rx="2" opacity="0.8"/>
+
+  <!-- Conference name -->
+  <text x="48" y="302" font-family="Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.80)" letter-spacing="1">23rd INGED International ELT Conference</text>
+
+  <!-- University -->
+  <text x="48" y="332" font-family="Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.55)">Tokat Gaziosmanpaşa University</text>
+
+  <!-- Dates badge -->
+  <rect x="48" y="364" width="210" height="46" rx="6" fill="rgba(255,255,255,0.10)"/>
+  <rect x="48" y="364" width="5" height="46" rx="3" fill="url(#gold)"/>
+  <text x="66" y="383" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.55)" letter-spacing="1">DATE</text>
+  <text x="66" y="401" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="white">November 6–8, 2026</text>
+
+  <!-- Right side: document icon suggestion -->
+  <rect x="580" y="160" width="160" height="200" rx="8" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <rect x="580" y="160" width="160" height="8" rx="4" fill="url(#gold)" opacity="0.6"/>
+  <line x1="600" y1="196" x2="720" y2="196" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+  <line x1="600" y1="216" x2="720" y2="216" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <line x1="600" y1="232" x2="700" y2="232" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <line x1="600" y1="256" x2="720" y2="256" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <line x1="600" y1="272" x2="720" y2="272" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <line x1="600" y1="288" x2="700" y2="288" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <line x1="600" y1="312" x2="720" y2="312" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <line x1="600" y1="328" x2="680" y2="328" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+</svg>
