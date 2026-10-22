@@ -31,6 +31,24 @@
 const NEWS_DATA = [
 
   {
+    id:       "conference-program-2026",
+    title:    "Conference Programme Matrix Now Available – 23rd INGED ELT Conference",
+    date:     "October 2026",
+    category: "conference",
+    body:     "The session programme matrix for the 23rd INGED International ELT Conference is now available for download. Venue and room assignments will be announced shortly.",
+    fullText: [
+      "We are pleased to share the session programme matrix for the <strong>23rd INGED International ELT Conference</strong> (Tokat Gaziosmanpaşa University, November 6–8, 2026).",
+      "The matrix provides an overview of all accepted presentations, workshops, and poster sessions scheduled across the conference days.",
+      "<strong>Please note:</strong> Venue and room assignments will be added to the programme in the coming days. We will share the updated version as soon as room allocations are finalised.",
+      "Download the current programme matrix using the button below."
+    ],
+    pdf: {
+      label: "Download Programme Matrix",
+      href:  "data/pdfs/conference-program-matrix-2026.pdf"
+    }
+  },
+
+  {
     id:       "abstract-submission-2026",
     title:    "Abstract Submission Now Open – 23rd INGED International ELT Conference",
     date:     "June 2026",
