@@ -45,7 +45,7 @@ const NEWS_DATA = [
     ],
     pdf: {
       label: "Download Program",
-      href:  "data/pdfs/conference-program-matrix-2026.pdf"
+      href:  "data/pdfs/conference-program-2026.pdf"
     }
   },
 
