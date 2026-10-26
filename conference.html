@@ -32,7 +32,7 @@
   </section>
 
   <!-- KEY DETAILS -->
-  <section class="section-sm section-subtle">
+  <section class="section-sm" style="background:linear-gradient(135deg,#eef6ff 0%,#f5f0ff 100%)">
     <div class="container">
       <div class="stats-strip">
         <div class="stat-cell">
@@ -78,6 +78,45 @@
       border-bottom:3px solid transparent;transition:color .2s,border-color .2s;
     }
     .conf-nav-link:hover,.conf-nav-link.active { color:var(--navy);border-bottom-color:var(--navy); }
+
+    /* ── Kicker pill badges ─────────────────────────── */
+    .kicker-teal   { background:#e0f7f4;color:#0e7068;padding:3px 10px;border-radius:20px; }
+    .kicker-amber  { background:#fff3cd;color:#8a6000;padding:3px 10px;border-radius:20px; }
+    .kicker-sky    { background:#dbeeff;color:#1a5fa0;padding:3px 10px;border-radius:20px; }
+    .kicker-rose   { background:#fde8ef;color:#9b1b4a;padding:3px 10px;border-radius:20px; }
+    .kicker-violet { background:#ede9ff;color:#5b21b6;padding:3px 10px;border-radius:20px; }
+    .kicker-green  { background:#dcf5e8;color:#1a6b40;padding:3px 10px;border-radius:20px; }
+    .kicker-gold   { background:#fdf0d0;color:#7a5000;padding:3px 10px;border-radius:20px; }
+
+    /* ── Section tint backgrounds ───────────────────── */
+    #conf-about    { background:#f0f7ff; }
+    #conf-dates    { background:#fff9ec; }
+    #conf-plenaries{ background:#f5f0ff; }
+    #conf-accomm   { background:#edfaf5; }
+    #conf-gala     { background:#fff4f0; }
+    #conf-venue    { background:#eef6ff; }
+    #conf-committees{ background:#f9f9ff; }
+
+    /* ── Stats strip ────────────────────────────────── */
+    .stat-cell { border-radius:var(--radius-lg);padding:20px 24px; }
+    .stat-num  { color:var(--navy); }
+
+    /* ── Coloured fcard left-border helpers ─────────── */
+    .fcard-teal   { border-left:3px solid #0e9e92 !important; }
+    .fcard-amber  { border-left:3px solid #e8a020 !important; }
+    .fcard-rose   { border-left:3px solid #d63b6e !important; }
+    .fcard-violet { border-left:3px solid #7c3aed !important; }
+    .fcard-green  { border-left:3px solid #059669 !important; }
+    .fcard-sky    { border-left:3px solid #2b80d4 !important; }
+
+    /* ── Important-dates row highlights ─────────────── */
+    tr.row-highlight td { background:#fff3cd;font-weight:700; }
+
+    /* ── Registration table category rows ───────────── */
+    tr.reg-cat td {
+      background:linear-gradient(90deg,#dbeeff,#eef6ff);
+      color:#1a3a70;font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;
+    }
   </style>
 
   <!-- PROGRAM ANNOUNCEMENT BANNER -->
@@ -105,7 +144,7 @@
       <div class="grid-2" style="gap:48px;align-items:start;">
         <div class="fade-in">
           <div class="sec-hd">
-            <span class="kicker">About the Conference</span>
+            <span class="kicker kicker-sky">About the Conference</span>
             <h2>INGED International ELT Conference</h2>
             <span class="rule"></span>
           </div>
@@ -119,7 +158,7 @@
 
         <div id="conf-dates" class="fade-in fade-in-d1">
           <div class="sec-hd">
-            <span class="kicker">Key Dates</span>
+            <span class="kicker kicker-amber">Key Dates</span>
             <h2>Important Dates</h2>
             <span class="rule"></span>
           </div>
@@ -132,15 +171,15 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Abstract Submission Deadline <span style="color:var(--gold);font-weight:700;">Extended!</span></td>
+              <tr class="row-highlight">
+                <td>Abstract Submission Deadline <span style="color:#8a6000;font-weight:700;">Extended!</span></td>
                 <td style="color:var(--navy);font-weight:700;">August 20, 2026</td>
               </tr>
               <tr>
                 <td>Notification of Acceptance</td>
                 <td style="color:var(--text);font-weight:600;">September 1, 2026</td>
               </tr>
-              <tr>
+              <tr class="row-highlight">
                 <td>Early Bird Registration Deadline</td>
                 <td style="color:var(--navy);font-weight:700;">September 30, 2026</td>
               </tr>
@@ -176,7 +215,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td colspan="3" style="background:var(--navy);color:white;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.5px;padding:6px 14px;">PRESENTERS</td>
+                  <td colspan="3" style="background:linear-gradient(90deg,#dbeeff,#eef6ff);color:#1a3a70;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.5px;padding:6px 14px;">PRESENTERS</td>
                 </tr>
                 <tr>
                   <td>INGED Members</td>
@@ -199,7 +238,7 @@
                   <td style="text-align:center;color:var(--text-light);">750</td>
                 </tr>
                 <tr>
-                  <td colspan="3" style="background:var(--navy);color:white;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.5px;padding:6px 14px;">PARTICIPATION ONLY</td>
+                  <td colspan="3" style="background:linear-gradient(90deg,#dbeeff,#eef6ff);color:#1a3a70;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.5px;padding:6px 14px;">PARTICIPATION ONLY</td>
                 </tr>
                 <tr>
                   <td>INGED Members</td>
@@ -251,7 +290,7 @@
   <section id="conf-plenaries" class="section">
     <div class="container">
       <div class="sec-hd fade-in" style="text-align:center;">
-        <span class="kicker">Keynotes</span>
+        <span class="kicker kicker-violet">Keynotes</span>
         <h2>Plenary Speakers</h2>
         <span class="rule" style="margin:0 auto;"></span>
       </div>
@@ -340,7 +379,7 @@
   <section id="conf-accomm" class="section-sm section-subtle">
     <div class="container">
       <div class="sec-hd fade-in">
-        <span class="kicker">Where to Stay</span>
+        <span class="kicker kicker-teal">Where to Stay</span>
         <h2>Accommodation</h2>
         <p>The following hotels in Tokat offer special congress rates for conference participants. Mention that you are attending the INGED Congress when making your reservation.</p>
         <span class="rule"></span>
@@ -348,7 +387,7 @@
       <div class="grid-3 fade-in" style="gap:24px;">
 
         <!-- Yazmacılar Han -->
-        <div class="fcard" style="border-left:3px solid var(--navy);">
+        <div class="fcard" style="border-left:3px solid #0e9e92;">
           <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:12px;">Yazmacılar Han Otel</div>
           <table style="width:100%;border-collapse:collapse;font-size:.88rem;">
             <thead>
@@ -372,7 +411,7 @@
         </div>
 
         <!-- Tower Hotel -->
-        <div class="fcard" style="border-left:3px solid var(--navy);">
+        <div class="fcard" style="border-left:3px solid #0e9e92;">
           <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:12px;">Tower Hotel</div>
           <table style="width:100%;border-collapse:collapse;font-size:.88rem;">
             <thead>
@@ -402,7 +441,7 @@
         </div>
 
         <!-- Silk Road Museum Hotel -->
-        <div class="fcard" style="border-left:3px solid var(--navy);">
+        <div class="fcard" style="border-left:3px solid #0e9e92;">
           <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:4px;">Silk Road Museum Hotel</div>
           <div style="font-size:.78rem;color:var(--text-light);margin-bottom:12px;">Deveciler Hanı · Since 1488</div>
           <table style="width:100%;border-collapse:collapse;font-size:.88rem;margin-bottom:10px;">
@@ -446,7 +485,7 @@
   <section id="conf-gala" class="section-sm">
     <div class="container">
       <div class="sec-hd fade-in">
-        <span class="kicker">Social Programme</span>
+        <span class="kicker kicker-rose">Social Programme</span>
         <h2>Gala Dinner</h2>
         <p>Join us for the conference gala dinner at the historic Silk Road Museum Hotel (Deveciler Hanı), bringing together participants for an evening of Turkish cuisine and good company.</p>
         <span class="rule"></span>
@@ -518,7 +557,7 @@
   <section id="conf-venue" class="section-sm section-subtle">
     <div class="container">
       <div class="sec-hd fade-in">
-        <span class="kicker">Venue &amp; Transport</span>
+        <span class="kicker kicker-sky">Venue &amp; Transport</span>
         <h2>Getting Here</h2>
         <p>The conference is held at <strong>Tokat Gaziosmanpaşa University, Taşlıçiftlik Campus</strong>, approximately 9 km from Tokat city centre on the Tokat–Amasya road (also the Ankara–Istanbul route).</p>
         <span class="rule"></span>
@@ -537,17 +576,17 @@
         <!-- Transport info -->
         <div style="display:flex;flex-direction:column;gap:16px;">
 
-          <div class="fcard" style="border-left:3px solid var(--navy);">
+          <div class="fcard" style="border-left:3px solid #2b80d4;">
             <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:10px;">🚌 Campus Bus</div>
             <p style="font-size:.86rem;margin:0;">Yellow university buses run from <strong>GOP Kız Öğrenci Yurdu</strong> along Behzat Bulvarı, turning at Niksar junction via Mevlana and Demirköprü to Taşlıçiftlik Campus. Frequency varies by schedule — look for the yellow buses.</p>
           </div>
 
-          <div class="fcard" style="border-left:3px solid var(--navy);">
+          <div class="fcard" style="border-left:3px solid #2b80d4;">
             <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:10px;">✈️ By Air</div>
             <p style="font-size:.86rem;margin:0;">The nearest airport is <strong>Tokat Airport (TJK)</strong>, served by Turkish Airlines from Istanbul (IST/SAW) and Ankara (ESB). Transfer to the campus takes approximately 20 minutes by taxi.</p>
           </div>
 
-          <div class="fcard" style="border-left:3px solid var(--navy);">
+          <div class="fcard" style="border-left:3px solid #2b80d4;">
             <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:10px;">🚗 By Road</div>
             <p style="font-size:.86rem;margin:0;">Tokat is on the <strong>Ankara–Samsun (D100/E88)</strong> highway corridor. From Ankara approximately 4 hours; from Istanbul approximately 7 hours. Campus is signposted on the Tokat–Amasya road.</p>
           </div>
@@ -600,7 +639,7 @@
         <!-- Scientific Committee -->
         <div class="fade-in">
           <div class="sec-hd">
-            <span class="kicker">Peer Review</span>
+            <span class="kicker kicker-violet">Peer Review</span>
             <h2>Scientific Committee</h2>
             <span class="rule"></span>
           </div>
@@ -633,7 +672,7 @@
         <!-- Organizing Committee -->
         <div class="fade-in fade-in-d1">
           <div class="sec-hd">
-            <span class="kicker">Organisation</span>
+            <span class="kicker kicker-sky">Organisation</span>
             <h2>Organizing Committee</h2>
             <span class="rule"></span>
           </div>
@@ -653,7 +692,7 @@
           </table>
 
           <div class="sec-hd" style="margin-top:40px;">
-            <span class="kicker">Host University</span>
+            <span class="kicker kicker-green">Host University</span>
             <h2>Local Organizing Committee</h2>
             <span class="rule"></span>
           </div>
@@ -681,7 +720,7 @@
   <section id="conf-history" class="section">
     <div class="container">
       <div class="sec-hd fade-in">
-        <span class="kicker">History</span>
+        <span class="kicker kicker-green">History</span>
         <h2>Previous Conferences</h2>
         <p>A visual archive of INGED International ELT Conference posters.</p>
         <span class="rule"></span>
@@ -739,7 +778,7 @@
   <section class="section section-subtle">
     <div class="container">
       <div class="sec-hd fade-in">
-        <span class="kicker">Publications</span>
+        <span class="kicker kicker-teal">Publications</span>
         <h2>Books of Abstracts</h2>
         <p>Books of Abstracts from previous INGED International ELT Conferences available for download.</p>
         <span class="rule"></span>
@@ -781,7 +820,7 @@
   <section id="conf-news" class="section">
     <div class="container">
       <div class="sec-hd fade-in">
-        <span class="kicker">Latest</span>
+        <span class="kicker kicker-amber">Latest</span>
         <h2>Conference News</h2>
         <span class="rule"></span>
       </div>
