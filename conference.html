@@ -63,6 +63,7 @@
         <li><a href="#conf-plenaries"  class="conf-nav-link">Plenary Speakers</a></li>
         <li><a href="#conf-dates"      class="conf-nav-link">Key Dates</a></li>
         <li><a href="#conf-accomm"     class="conf-nav-link">Accommodation</a></li>
+        <li><a href="#conf-gala"       class="conf-nav-link">Gala Dinner</a></li>
         <li><a href="#conf-committees" class="conf-nav-link">Committees</a></li>
         <li><a href="#conf-history"    class="conf-nav-link">Previous Conferences</a></li>
         <li><a href="#conf-news"       class="conf-nav-link">News</a></li>
@@ -440,6 +441,78 @@
     </div>
   </section>
 
+  <!-- GALA DINNER -->
+  <section id="conf-gala" class="section-sm">
+    <div class="container">
+      <div class="sec-hd fade-in">
+        <span class="kicker">Social Programme</span>
+        <h2>Gala Dinner</h2>
+        <p>Join us for the conference gala dinner at the historic Silk Road Museum Hotel (Deveciler Hanı), bringing together participants for an evening of Turkish cuisine and good company.</p>
+        <span class="rule"></span>
+      </div>
+      <div class="grid-2 fade-in" style="gap:24px;align-items:start;">
+
+        <!-- Details card -->
+        <div class="fcard" style="border-left:3px solid var(--gold,#c9a227);">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:14px;">Event Details</div>
+          <table style="width:100%;border-collapse:collapse;font-size:.9rem;">
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:9px 10px;color:var(--text-light);font-weight:600;width:38%;">Date</td>
+                <td style="padding:9px 10px;font-weight:700;">Friday, 6 November 2026</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:9px 10px;color:var(--text-light);font-weight:600;">Time</td>
+                <td style="padding:9px 10px;font-weight:700;">19:00</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:9px 10px;color:var(--text-light);font-weight:600;">Venue</td>
+                <td style="padding:9px 10px;">Silk Road Museum Hotel<br><span style="font-size:.82rem;color:var(--text-light);">Cemalettin Mh. Sulusokak Cad. No: 31, Merkez / Tokat</span></td>
+              </tr>
+              <tr>
+                <td style="padding:9px 10px;color:var(--text-light);font-weight:600;">Format</td>
+                <td style="padding:9px 10px;">U-shaped banquet with live music</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Menu card -->
+        <div class="fcard" style="border-left:3px solid var(--gold,#c9a227);">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:14px;">Menu Options</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="background:var(--bg-subtle,#f8f9fb);border-radius:8px;padding:14px;">
+              <div style="font-weight:700;font-size:.85rem;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:.03em;">Beef Menu</div>
+              <ul style="font-size:.83rem;padding-left:1rem;margin:0 0 10px;color:var(--text-dark,#1a1a2e);">
+                <li>Lentil Soup</li>
+                <li>Püreli Tas Kebabı</li>
+                <li>Rice</li>
+                <li>Grilled Tomato &amp; Pepper</li>
+                <li>Salad</li>
+                <li>Rice Pudding</li>
+              </ul>
+              <div style="font-weight:700;color:var(--navy);font-size:.95rem;">1,500 ₺ <span style="font-size:.75rem;font-weight:400;color:var(--text-light);">incl. VAT &amp; soft drinks</span></div>
+            </div>
+            <div style="background:var(--bg-subtle,#f8f9fb);border-radius:8px;padding:14px;">
+              <div style="font-weight:700;font-size:.85rem;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:.03em;">Chicken Menu</div>
+              <ul style="font-size:.83rem;padding-left:1rem;margin:0 0 10px;color:var(--text-dark,#1a1a2e);">
+                <li>Lentil Soup</li>
+                <li>Tavuk Külbastı</li>
+                <li>Rice</li>
+                <li>Grilled Tomato &amp; Pepper</li>
+                <li>Salad</li>
+                <li>Rice Pudding</li>
+              </ul>
+              <div style="font-weight:700;color:var(--navy);font-size:.95rem;">1,300 ₺ <span style="font-size:.75rem;font-weight:400;color:var(--text-light);">incl. VAT &amp; soft drinks</span></div>
+            </div>
+          </div>
+          <p style="font-size:.78rem;color:var(--text-light);margin-top:12px;margin-bottom:0;">Vegetarian option available (chicken menu price). Further details will follow with conference registration.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- CALL FOR PAPERS DOWNLOAD -->
   <section class="section-sm">
     <div class="container">
@@ -743,7 +816,7 @@
   <script>
   (function () {
     var links    = document.querySelectorAll('.conf-nav-link');
-    var sections = ['conf-about','conf-plenaries','conf-dates','conf-accomm','conf-committees','conf-history','conf-news'];
+    var sections = ['conf-about','conf-plenaries','conf-dates','conf-accomm','conf-gala','conf-committees','conf-history','conf-news'];
     function onScroll() {
       var scrollY = window.scrollY + 80;
       var current = sections[0];
