@@ -64,6 +64,7 @@
         <li><a href="#conf-dates"      class="conf-nav-link">Key Dates</a></li>
         <li><a href="#conf-accomm"     class="conf-nav-link">Accommodation</a></li>
         <li><a href="#conf-gala"       class="conf-nav-link">Gala Dinner</a></li>
+        <li><a href="#conf-venue"      class="conf-nav-link">Getting Here</a></li>
         <li><a href="#conf-committees" class="conf-nav-link">Committees</a></li>
         <li><a href="#conf-history"    class="conf-nav-link">Previous Conferences</a></li>
         <li><a href="#conf-news"       class="conf-nav-link">News</a></li>
@@ -513,6 +514,52 @@
     </div>
   </section>
 
+  <!-- GETTING HERE / VENUE -->
+  <section id="conf-venue" class="section-sm section-subtle">
+    <div class="container">
+      <div class="sec-hd fade-in">
+        <span class="kicker">Venue &amp; Transport</span>
+        <h2>Getting Here</h2>
+        <p>The conference is held at <strong>Tokat Gaziosmanpaşa University, Taşlıçiftlik Campus</strong>, approximately 9 km from Tokat city centre on the Tokat–Amasya road (also the Ankara–Istanbul route).</p>
+        <span class="rule"></span>
+      </div>
+      <div class="grid-2 fade-in" style="gap:24px;align-items:start;">
+
+        <!-- Map -->
+        <div style="border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.10);line-height:0;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3052.0!2d36.479688!3d40.3310554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x407db9aea48bdfc7%3A0xd44c0b0905f7b9e7!2sTokat+Gaziosmanpa%C5%9Fa+%C3%9Cniversitesi+Ta%C5%9Fl%C4%B1%C3%A7iftlik+Yerle%C5%9Fkesi!5e0!3m2!1sen!2str!4v1700000000000!5m2!1sen!2str"
+            width="100%" height="340" style="border:0;display:block;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Tokat Gaziosmanpaşa University Taşlıçiftlik Campus map"></iframe>
+        </div>
+
+        <!-- Transport info -->
+        <div style="display:flex;flex-direction:column;gap:16px;">
+
+          <div class="fcard" style="border-left:3px solid var(--navy);">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:10px;">🚌 Campus Bus</div>
+            <p style="font-size:.86rem;margin:0;">Yellow university buses run from <strong>GOP Kız Öğrenci Yurdu</strong> along Behzat Bulvarı, turning at Niksar junction via Mevlana and Demirköprü to Taşlıçiftlik Campus. Frequency varies by schedule — look for the yellow buses.</p>
+          </div>
+
+          <div class="fcard" style="border-left:3px solid var(--navy);">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:10px;">✈️ By Air</div>
+            <p style="font-size:.86rem;margin:0;">The nearest airport is <strong>Tokat Airport (TJK)</strong>, served by Turkish Airlines from Istanbul (IST/SAW) and Ankara (ESB). Transfer to the campus takes approximately 20 minutes by taxi.</p>
+          </div>
+
+          <div class="fcard" style="border-left:3px solid var(--navy);">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:10px;">🚗 By Road</div>
+            <p style="font-size:.86rem;margin:0;">Tokat is on the <strong>Ankara–Samsun (D100/E88)</strong> highway corridor. From Ankara approximately 4 hours; from Istanbul approximately 7 hours. Campus is signposted on the Tokat–Amasya road.</p>
+          </div>
+
+          <a href="https://www.gop.edu.tr/Icerik.aspx?d=tr-TR&mk=30482&m=ulasim" target="_blank" rel="noopener"
+             class="btn btn-primary btn-sm" style="align-self:flex-start;">Full Directions (TOGÜ Website)</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CALL FOR PAPERS DOWNLOAD -->
   <section class="section-sm">
     <div class="container">
@@ -816,7 +863,7 @@
   <script>
   (function () {
     var links    = document.querySelectorAll('.conf-nav-link');
-    var sections = ['conf-about','conf-plenaries','conf-dates','conf-accomm','conf-gala','conf-committees','conf-history','conf-news'];
+    var sections = ['conf-about','conf-plenaries','conf-dates','conf-accomm','conf-gala','conf-venue','conf-committees','conf-history','conf-news'];
     function onScroll() {
       var scrollY = window.scrollY + 80;
       var current = sections[0];
