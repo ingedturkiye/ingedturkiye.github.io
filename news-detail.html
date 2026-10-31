@@ -246,7 +246,7 @@
 
       var imageBlockHtml = '';
       if (imgList.length === 1) {
-        imageBlockHtml = '<img src="' + imgList[0] + '" alt="' + item.title + '" class="news-detail-hero-img">';
+        imageBlockHtml = '<img src="' + imgList[0] + '" alt="' + item.title + '" class="news-detail-hero-img" style="object-position:' + (item.bgPosition || 'center 20%') + '">';
       } else if (imgList.length > 1) {
         var slides = imgList.map(function (src) {
           return '<img src="' + src + '" alt="' + item.title + '">';
