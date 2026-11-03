@@ -31,6 +31,20 @@
 const NEWS_DATA = [
 
   {
+    id:       "registration-update-nov2026",
+    title:    "Registration Update: Presenter Registration Closed — Participant On-Site Registration Still Open",
+    date:     "November 2026",
+    category: "announcement",
+    body:     "Online registration for presenters is now closed. Participants (non-presenters) may still register on-site at the conference registration desk.",
+    fullText: [
+      "As the 23rd INGED International ELT Conference approaches (November 6–8, 2026, Tokat Gaziosmanpaşa University), we would like to share an important update on registration.",
+      "<strong>Presenter registration is now closed.</strong> If you have already submitted your registration and payment, your place is confirmed. Please bring a copy of your bank transfer receipt to the registration desk.",
+      "<strong>Participant registration (non-presenters) is still open — on-site only.</strong> Colleagues who wish to attend the conference without presenting are warmly welcome and may register at the conference registration desk upon arrival. Online registration for participants is no longer available.",
+      "For any questions, please contact us at <a href='mailto:ingedturkiye@gmail.com'>ingedturkiye@gmail.com</a>. We look forward to welcoming you to Tokat!"
+    ]
+  },
+
+  {
     id:       "conference-program-2026",
     title:    "Conference Program Now Available – 23rd INGED ELT Conference",
     date:     "October 2026",
