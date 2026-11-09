@@ -45,6 +45,7 @@ const NEWS_DATA = [
       "data/images/conference-2026-gallery/conf-2026-07.jpg",
       "data/images/conference-2026-gallery/conf-2026-08.jpg",
       "data/images/conference-2026-gallery/conf-2026-09.jpg",
+      "data/images/conference-2026-gallery/conf-2026-09b.jpg",
       "data/images/conference-2026-gallery/conf-2026-10.jpg",
       "data/images/conference-2026-gallery/conf-2026-11.jpg"
     ],
