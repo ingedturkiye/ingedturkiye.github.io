@@ -47,13 +47,15 @@ const NEWS_DATA = [
       "data/images/conference-2026-gallery/conf-2026-09.jpg",
       "data/images/conference-2026-gallery/conf-2026-09b.jpg",
       "data/images/conference-2026-gallery/conf-2026-10.jpg",
-      "data/images/conference-2026-gallery/conf-2026-11.jpg"
+      "data/images/conference-2026-gallery/conf-2026-11.jpg",
+      "data/images/conference-2026-gallery/conf-2026-12.jpg"
     ],
     body: "The 23rd INGED International ELT Conference has come to a beautiful close. Three inspiring days filled with ideas, collaboration, and warm connections at Tokat Gaziosmanpaşa University.",
     fullText: [
       "The <strong>23rd INGED International ELT Conference</strong> has come to a wonderful close. From November 6 to 8, 2026, Tokat Gaziosmanpaşa University welcomed educators, researchers, and ELT professionals from across Turkey and beyond for three days of inspiring plenary sessions, paper presentations, workshops, and heartfelt connection.",
       "We are deeply grateful to our <strong>Local Organizing Committee</strong> whose dedication and warmth made everything possible: <strong>Doç. Dr. Züleyha Ünlü Çarlık</strong>, <strong>Dr. Öğr. Üyesi Şeyma Kökcü</strong>, <strong>Dr. Öğr. Üyesi Zafer Susoy</strong>, <strong>Dr. Öğr. Üyesi Elham Zarfsaz</strong>, <strong>Dr. Öğr. Üyesi Hande Çetin</strong>, and <strong>Arş. Gör. Emine Demir</strong>. Dear Züleyha Hocam, Şeyma Hocam, Zafer Hocam, Elham Hocam, Hande Hocam, Emine Hocam — thank you from the bottom of our hearts.",
       "A heartfelt thank-you goes to all our <strong>presenters</strong> who shared their research, classroom experiences, and insights so generously, and to every <strong>participant</strong> who travelled to Tokat to be part of this community. The energy and engagement you brought made these three days truly memorable.",
+      "A very special thank-you to our plenary speaker <strong>Dr. Amber Warren</strong>, who travelled all the way from Tennessee, USA, to be with us — jetlag and all. Your talk was inspiring, your warmth even more so. We are so grateful you made the journey! 🌍",
       "We also want to give a very special thank-you to the <strong>TOGÜ ELT students</strong> who gave up their weekends and worked tirelessly behind the scenes to keep everything running smoothly. Your enthusiasm, dedication, and hard work did not go unnoticed — this conference would not have been the same without you. 💙",
       "We hope to see you all at the next INGED conference. Until then — keep inspiring, keep connecting, keep growing. 🎓"
     ]
