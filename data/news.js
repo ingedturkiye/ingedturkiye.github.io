@@ -31,6 +31,33 @@
 const NEWS_DATA = [
 
   {
+    id:       "conference-2026-recap",
+    title:    "What a Wonderful Three Days in Tokat! — 23rd INGED ELT Conference Recap",
+    date:     "November 2026",
+    category: "conference",
+    images: [
+      "data/images/conference-2026-gallery/conf-2026-01.jpg",
+      "data/images/conference-2026-gallery/conf-2026-02.jpg",
+      "data/images/conference-2026-gallery/conf-2026-03.jpg",
+      "data/images/conference-2026-gallery/conf-2026-04.jpg",
+      "data/images/conference-2026-gallery/conf-2026-05.jpg",
+      "data/images/conference-2026-gallery/conf-2026-06.jpg",
+      "data/images/conference-2026-gallery/conf-2026-07.jpg",
+      "data/images/conference-2026-gallery/conf-2026-08.jpg",
+      "data/images/conference-2026-gallery/conf-2026-09.jpg",
+      "data/images/conference-2026-gallery/conf-2026-10.jpg",
+      "data/images/conference-2026-gallery/conf-2026-11.jpg"
+    ],
+    body: "The 23rd INGED International ELT Conference has come to a beautiful close. Three inspiring days filled with ideas, collaboration, and warm connections at Tokat Gaziosmanpaşa University.",
+    fullText: [
+      "The <strong>23rd INGED International ELT Conference</strong> has come to a wonderful close. From November 6 to 8, 2026, Tokat Gaziosmanpaşa University welcomed educators, researchers, and ELT professionals from across Turkey and beyond for three days of inspiring plenary sessions, paper presentations, workshops, and heartfelt connection.",
+      "We are deeply grateful to our <strong>Local Organizing Committee</strong> whose dedication and warmth made everything possible: <strong>Doç. Dr. Züleyha Ünlü Çarlık</strong>, <strong>Dr. Öğr. Üyesi Şeyma Kökcü</strong>, <strong>Dr. Öğr. Üyesi Zafer Susoy</strong>, and <strong>Dr. Öğr. Üyesi Elham Zarfsaz</strong>. Dear Züleyha Hocam, Şeyma Hocam, Zafer Hocam, Elham Hocam — thank you from the bottom of our hearts.",
+      "A heartfelt thank-you goes to all our <strong>presenters</strong> who shared their research, classroom experiences, and insights so generously, and to every <strong>participant</strong> who travelled to Tokat to be part of this community. The energy and engagement you brought made these three days truly memorable.",
+      "We hope to see you all at the next INGED conference. Until then — keep inspiring, keep connecting, keep growing. 🎓"
+    ]
+  },
+
+  {
     id:       "registration-update-nov2026",
     title:    "Registration Update: Presenter Registration Closed — Participant On-Site Registration Still Open",
     date:     "November 2026",
